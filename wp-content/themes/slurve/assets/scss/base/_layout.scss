@@ -1,0 +1,27 @@
+.main {
+  grid-area: main;
+
+  @include media-breakpoint-down(md) {
+    .container {
+      padding: 0 30px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .wrap {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    height: 100vh;
+    grid-template-rows: $header-height 1fr $footer-height;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  [class*="col-md"] {
+    margin-bottom: $spacer * 2.5;
+  }
+}

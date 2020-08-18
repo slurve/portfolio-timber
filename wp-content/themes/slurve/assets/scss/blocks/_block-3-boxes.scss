@@ -1,0 +1,25 @@
+.block-3-boxes {
+  &__inner {
+    @include media-breakpoint-up(md) {
+      margin-top: $spacer * 3;
+    }
+  }
+
+  &__item {
+    height: 100%;
+    text-align: center;
+    padding: $spacer * 2;
+    border: 1px solid $gray-400;
+
+    img {
+      width: 200px;
+      display: block;
+      margin: 0 auto $spacer;
+    }
+
+    p {
+      text-align: left;
+      margin: 0;
+    }
+  }
+}

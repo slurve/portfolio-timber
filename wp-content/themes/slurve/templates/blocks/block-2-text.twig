@@ -1,0 +1,30 @@
+<div class="block block-2-text block-2-text--{{ block.block_2_text__bgcolor }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="block-2-text__col">
+          <h2 class="headline-h1">
+            {{ block.block_2_text__headline }}
+          </h2>
+          {{ block.block_3_icon__text
+            ? '<p>' ~ block.block_3_icon__text ~ '</p>' }}
+          {% if block.block_2_text__link %}
+            <a href="{{ block.block_2_text__link.url }}"
+              {{
+              block.block_2_text__link.target
+                ? 'target="_blank" rel="noopener"'
+              }}
+              class="btn btn-primary">
+              {{ block.block_2_text__link.title }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="block-2-text__col">
+          {{ block.block_2_text__wysiwyg }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

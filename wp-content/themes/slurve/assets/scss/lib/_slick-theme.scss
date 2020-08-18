@@ -1,0 +1,51 @@
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 35%;
+  width: 20px;
+  height: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 20px 10px;
+  border: none;
+  outline: none;
+  opacity: 0.8;
+  z-index: 9998;
+
+  @include media-breakpoint-up(md) {
+    width: 50px;
+    height: 30px;
+    background-size: 50px 30px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  span {
+    display: none;
+  }
+}
+
+.slick-prev {
+  left: -5px;
+  background-image: url(../assets/images/carat.svg);
+  transform: rotate(90deg);
+
+  @include media-breakpoint-up(md) {
+    left: -50px;
+  }
+}
+
+.slick-next {
+  right: -5px;
+  background-image: url(../assets/images/carat.svg);
+  transform: rotate(-90deg);
+
+  @include media-breakpoint-up(md) {
+    right: -50px;
+  }
+}

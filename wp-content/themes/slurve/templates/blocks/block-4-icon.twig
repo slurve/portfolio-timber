@@ -1,0 +1,29 @@
+<div class="block block-4-icon">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        {{ block.block_4_icon__label
+          ? '<h4 class="headline-h4">' ~ block.block_4_icon__label ~ '</h4>' }}
+        <h2 class="headline-h2">
+          {{ block.block_4_icon__headline }}
+        </h2>
+        {{ block.block_4_icon__text
+          ? '<p>' ~ block.block_4_icon__text ~ '</p>' }}
+      </div>
+    </div>
+    <div class="row block-4-icon__items">
+      {% for item in block.block_4_icon__data %}
+        <div class="col-md-3 block-4-icon__item">
+          <img src="{{ Image(item.column_image).src }}"
+            alt="{{ Image(item.column_image).alt }}" />
+          <h3 class="headline-h3">
+            {{ item.column_headline }}
+          </h3>
+          {% if item.column_text %}
+            {{ item.column_text }}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

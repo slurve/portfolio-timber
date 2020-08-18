@@ -1,0 +1,35 @@
+<div class="block block-text-photo">
+  <picture>
+    <source srcset="{{ Image(block.block_text_photo__photo).src
+        |resize(1000, 1000)
+        |towebp }}"
+      type="image/webp" />
+    <source srcset="{{ Image(block.block_text_photo__photo).src
+        |resize(1000, 1000)
+        |tojpg }}"
+      type="image/jpeg" />
+    <img src="{{ Image(block.block_text_photo__photo).src
+        |resize(1000, 1000)
+        |tojpg }}"
+      alt="{{ Image(block.block_text_photo__photo).alt }}" />
+  </picture>
+  <div class="container block-text-photo__inner">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="headline-h1">
+          {{ block.block_text_photo__headline }}
+        </h2>
+        {% if block.block_text_photo__link %}
+          <a href="{{ block.block_text_photo__link.url }}"
+            {{
+            block.block_text_photo__link.target
+              ? 'target="_blank" rel="noopener"'
+            }}
+            class="btn btn-secondary">
+            {{ block.block_text_photo__link.title }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

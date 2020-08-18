@@ -1,0 +1,33 @@
+<div class="block block-portfolio-more">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <strong>Other Direct Investments</strong>
+        <div class="container">
+          <div class="row">
+            {% for investment in investments_more %}
+              <a class="col-md-4" href="{{ investment.link }}">
+                <picture>
+                  <source srcset="{{ Image(investment.investment__logo).src
+                      |towebp
+                      |letterbox(300, 120, '#f2f2f2') }}"
+                    type="image/webp" />
+                  <source srcset="{{ Image(
+                      investment.investment__logo
+                    ).src|letterbox(300, 120, '#f2f2f2') }}"
+                    type="image/png" />
+                  <img src="{{ Image(investment.investment__logo).src|letterbox(
+                      300,
+                      120,
+                      '#f2f2f2'
+                    ) }}"
+                    alt="{{ Image(investment.investment__logo).alt }}" />
+                </picture>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

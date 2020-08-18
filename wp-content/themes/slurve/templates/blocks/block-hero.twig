@@ -1,0 +1,63 @@
+<div class="block block-hero block-hero--{{
+  block.block_hero__layout
+  }} block-hero--{{ block.block_hero__bg_pos }}">
+  {% if is_front %}
+    <div class="whitesnake">
+      <video playsinline autoplay muted loop>
+        <source src="https://eversideprod.wpengine.com/wp-content/uploads/2020/07/whitesnake4.webm"
+          type="video/webm" />
+        <source src="https://eversideprod.wpengine.com/wp-content/uploads/2020/07/whitesnake3.mp4"
+          type="video/mp4" />Sorry, your browser doesn't support embedded
+        videos.
+      </video>
+    </div>
+  {% else %}
+    <picture>
+      <source srcset="{{ Image(block.block_hero__bg).src('large')|towebp }}"
+        type="image/webp" />
+      <source srcset="{{ Image(block.block_hero__bg).src('large') }}"
+        type="image/jpeg" />
+      <img class="bg"
+        src="{{ Image(block.block_hero__bg).src('large') }}"
+        alt="{{ Image(block.block_hero__bg).alt }}" />
+    </picture>
+  {% endif %}
+  <div class="container block-hero__inner">
+    <div class="row">
+      {% if block.block_hero__layout == 'one-column' %}
+        <div class="col-12">
+          <div class="block-hero__text">
+            <h1 class="headline-h1">
+              {{ block.block_hero__headline }}
+            </h1>
+          </div>
+        </div>
+      {% else %}
+        <div class="col-md-7">
+          <div class="block-hero__text">
+            <h1 class="headline-h1">
+              {{ block.block_hero__headline }}
+            </h1>
+            {% if block.block_hero__link.url %}
+              <a class="btn btn-secondary"
+                href="{{ block.block_hero__link.url }}"
+                {{
+                block.block_hero__link.target
+                  ? 'target="_blank" rel="noopener"'
+                }}>
+                {{ block.block_hero__link.title }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="block-hero__text">
+            <p>
+              {{ block.block_hero__text }}
+            </p>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

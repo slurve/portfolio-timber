@@ -1,0 +1,146 @@
+.block-news {
+  .grid {
+    display: grid;
+    grid-gap: $spacer * 1.5;
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      background-color: $gray-100;
+      padding: $spacer * 2;
+    }
+  }
+}
+
+.alm-btn-wrap {
+  margin: $spacer * 2 0;
+  text-align: center;
+
+  .btn {
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    @include fontSize(18px);
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.brief {
+  background-color: $gray-100;
+  padding: $spacer * 2;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transition: background-color 0.3ms ease-in;
+    background-color: darken($gray-100, 5%);
+  }
+
+  .date {
+    float: right;
+    color: $black;
+    font-weight: 700;
+  }
+
+  .btn {
+    margin-top: auto;
+    align-self: flex-start;
+    display: inline-block;
+  }
+
+  strong {
+    color: $primary;
+  }
+
+  h2 {
+    color: $black;
+    margin: $spacer/1.5 0 $spacer * 2;
+  }
+}
+
+.brief-featured {
+  position: relative;
+  margin: $spacer * 5 0 $spacer * 3;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    margin-top: $spacer * 3;
+  }
+
+  &__text {
+    z-index: 2;
+    position: relative;
+    order: 2;
+
+    @include media-breakpoint-up(md) {
+      flex: 1 1 42%;
+      order: 1;
+    }
+
+    .date {
+      float: right;
+      font-weight: 700;
+    }
+
+    h2 {
+      margin: $spacer/1.5 0 $spacer * 1.5;
+    }
+
+    p {
+      @include fontSize(22px);
+    }
+
+    .btn-outline-light {
+      padding-left: 0 !important;
+      color: $white;
+
+      &:hover {
+        background: none;
+
+        &::after {
+          background-image: url(../assets/images/carat-light.svg);
+        }
+      }
+    }
+
+    .inner {
+      background-color: rgba($primary, 0.9);
+      color: $white;
+      padding: $spacer * 3;
+
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        top: 0;
+        right: -$spacer * 9;
+      }
+    }
+  }
+
+  &__photo {
+    position: relative;
+    order: 1;
+
+    @include media-breakpoint-up(md) {
+      flex: 1 1 58%;
+      order: 2;
+    }
+
+    img {
+      width: 100%;
+      height: 400px;
+      max-width: 100%;
+      object-fit: cover;
+      z-index: 1;
+
+      @include media-breakpoint-up(md) {
+        margin-top: $spacer * 8;
+      }
+    }
+  }
+}

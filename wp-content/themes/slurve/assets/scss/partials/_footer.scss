@@ -1,0 +1,37 @@
+.footer {
+  grid-area: footer;
+  background-color: #222;
+  color: $white;
+  padding: $spacer * 2 0 0;
+  @include fontSize(13px);
+  line-height: 1.6;
+  z-index: 2;
+
+  @include media-breakpoint-up(lg) {
+    @include fontSize(15px);
+    line-height: 1.8;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  a {
+    color: $white;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    margin-bottom: $spacer/1.5;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $spacer * 1.2;
+    }
+  }
+
+  .social {
+    margin-top: $spacer;
+
+    svg {
+      fill: $white;
+    }
+  }
+}

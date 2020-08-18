@@ -1,0 +1,76 @@
+.block-approach-hero {
+  color: $white;
+  padding: $spacer * 4 0;
+  @include bgCover($primary);
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+
+    .approach-text {
+      padding: $spacer * 3 0 0;
+
+      @include media-breakpoint-up(md) {
+        padding-right: $spacer * 3;
+      }
+    }
+  }
+
+  .stats {
+    background-color: $secondary;
+    padding: $spacer * 2;
+    margin: 0;
+
+    strong {
+      @include fontSize(36px);
+    }
+
+    &__item {
+      border-bottom: 1px solid $primary;
+      padding: $spacer;
+      display: flex;
+      align-items: center;
+
+      @include media-breakpoint-up(md) {
+        align-items: flex-start;
+      }
+
+      p {
+        @include media-breakpoint-up(md) {
+          width: 50%;
+          flex: 1 1 50%;
+
+          &:first-child {
+            text-align: right;
+            padding-right: $spacer * 1.5;
+          }
+        }
+
+        &:last-child {
+          margin-top: 2px;
+          @include fontSize(17px);
+        }
+      }
+
+      &:last-child {
+        border: 0;
+
+        strong {
+          display: block;
+          @include fontSize(20px);
+        }
+      }
+    }
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+}

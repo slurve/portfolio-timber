@@ -1,0 +1,48 @@
+<div class="block block-news">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {% for item in news %}
+          <a class="brief-featured" href="{{ item.link }}">
+            <div class="brief-featured__text">
+              <div class="inner">
+                <strong>NEWS</strong>
+                <span class="date">{{ item.date('m/d/Y') }}</span>
+                <h2 class="headline-h2">
+                  {{ item.title }}
+                </h2>
+                <p>
+                  {{ item.post_content|excerpt(30) }}
+                </p>
+                <span class="btn btn-outline-light">Read more</span>
+              </div>
+            </div>
+            <div class="brief-featured__photo">
+              <picture>
+                <source srcset="{{ Image(post.news__photo).src
+                    |resize(1000, 1000)
+                    |towebp }}"
+                  type="image/webp" />
+                <source srcset="{{ Image(post.news__photo).src
+                    |resize(1000, 1000)
+                    |tojpg }}"
+                  type="image/jpeg" />
+                <img src="{{ Image(post.news__photo).src
+                    |resize(1000, 1000)
+                    |tojpg }}"
+                  alt="{{ Image(post.news__photo).alt }}" />
+              </picture>
+            </div>
+          </a>
+        {% endfor %}
+
+        {% filter shortcodes %}
+          [ajax_load_more container_type="div" repeater="template_1"
+          post_type="cpt_news" posts_per_page="{{ post.news__number_stories }}"
+          scroll="false" offset="1" transition_container="false"
+          button_label="Load more"]
+        {% endfilter %}
+      </div>
+    </div>
+  </div>
+</div>

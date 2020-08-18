@@ -1,0 +1,17 @@
+/*!
+  Theme Name: Slurve
+  Theme URI: https://slurve.com
+  Author: Alex Reid
+  Author URI: https://slurve.com/
+  Description: Custom theme for Slurve.
+  Version: 1.0
+*/
+
+@import "base/util";
+@import "base/global";
+@import "base/form";
+@import "base/layout";
+
+@import "lib/*";
+@import "partials/*";
+@import "blocks/**/*.scss";

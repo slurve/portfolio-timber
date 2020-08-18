@@ -1,0 +1,34 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+  <picture>
+    <source srcset="{{ Image(post.contact__bg).src|resize(1400)|towebp }}"
+      type="image/webp" />
+    <source srcset="{{ Image(post.contact__bg).src|resize(1400)|tojpg }}"
+      type="image/jpeg" />
+    <img class="contact-bg"
+      src="{{ Image(post.contact__bg).src|resize(1400)|tojpg }}"
+      alt="{{ Image(post.contact__bg).alt }}" />
+  </picture>
+
+  <div class="contact-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 contact-info">
+          <h1 class="headline-h1">
+            {{ post.title }}
+          </h1>
+          <p>
+            {{ contact__address }}
+          </p>
+          <p>
+            EMAIL<br />{{ contact__email }}
+          </p>
+          <p>
+            PHONE<br />{{ contact__phone }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

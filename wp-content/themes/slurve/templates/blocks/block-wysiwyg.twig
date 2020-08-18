@@ -1,0 +1,24 @@
+<div class="block block-wysiwyg">
+  <div class="container">
+    <div class="row">
+      {% if block.block_wysiwyg__cols == '2' %}
+        <div class="col-md-6">
+          <div class="wysiwyg">
+            {{ block.block_wysiwyg__data1 }}
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="wysiwyg">
+            {{ block.block_wysiwyg__data2 }}
+          </div>
+        </div>
+      {% else %}
+        <div class="col">
+          <div class="wysiwyg">
+            {{ block.block_wysiwyg__data }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

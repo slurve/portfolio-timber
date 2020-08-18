@@ -1,0 +1,14 @@
+{% if this_post %}
+  <div class="post-quotes">
+    {% for quote in this_post %}
+      <blockquote>
+        <p>
+          "{{ quote.quote_text }}"
+        </p>
+        <footer>
+          {{ quote.quote_attr }}
+        </footer>
+      </blockquote>
+    {% endfor %}
+  </div>
+{% endif %}

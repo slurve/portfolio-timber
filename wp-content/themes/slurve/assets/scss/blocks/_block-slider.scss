@@ -1,0 +1,44 @@
+.block-slider {
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+  }
+
+  .headline-h2 {
+    margin-bottom: $spacer * 2;
+
+    em {
+      display: block;
+      @include fontSize(22px);
+
+      @include media-breakpoint-up(lg) {
+        @include fontSize(42px);
+      }
+    }
+  }
+
+  img {
+    margin: 0 auto;
+    width: 380px;
+    max-width: 100%;
+  }
+
+  .slide-text {
+    @include media-breakpoint-up(lg) {
+      padding-right: $spacer * 4;
+    }
+  }
+
+  .source {
+    @include fontSize(14px);
+
+    @include media-breakpoint-up(lg) {
+      text-align: right;
+    }
+  }
+
+  .stats__item p:last-child {
+    font-weight: 500;
+  }
+}

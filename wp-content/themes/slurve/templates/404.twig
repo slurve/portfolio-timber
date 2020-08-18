@@ -1,0 +1,26 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+  <div class="block block-error404">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 offset-md-2 block-error404__image">
+          <picture>
+            <source srcset="{{ Image(error404__image).src('large')|towebp }}"
+              type="image/webp" />
+            <source srcset="{{ Image(error404__image).src('large') }}"
+              type="image/jpeg" />
+            <img src="{{ Image(error404__image).src('large') }}"
+              alt="{{ Image(error404__image).alt }}" />
+          </picture>
+        </div>
+        <div class="col-md-7 block-error404__text">
+          <h1 class="headline-h1">
+            {{ error404__headline }}
+          </h1>
+          {{ error404__text }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

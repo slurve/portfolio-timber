@@ -1,0 +1,49 @@
+<div class="block block-approach-hero">
+  <img class="bg" src="{{ Image(block.block_approach_hero__bg).src }}" alt="" />
+  <div class="container block-approach-hero__inner">
+    <div class="row">
+      {% if block.block_approach_hero__layout == 'one-column' %}
+        <div class="col-12">
+          <h1 class="headline-h1">
+            {{ block.block_approach_hero__headline }}
+          </h1>
+        </div>
+      {% else %}
+        <div class="col-md-7">
+          <div class="approach-text">
+            <h1 class="headline-h2">
+              {{ block.block_approach_hero__headline }}
+            </h1>
+            <p>
+              {{ block.block_approach_hero__text }}
+            </p>
+            {% if block.block_approach_hero__link.url %}
+              <a class="btn btn-primary"
+                href="{{ block.block_approach_hero__link.url }}"
+                {{
+                block.block_approach_hero__link.target
+                  ? 'target="_blank" rel="noopener"'
+                }}>
+                {{ block.block_approach_hero__link.title }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="stats">
+            {% for stat in block.block_approach_hero__stats %}
+              <div class="stats__item">
+                <p>
+                  <strong>{{ stat.stat_number }}</strong>
+                </p>
+                <p>
+                  {{ stat.stat_text }}
+                </p>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

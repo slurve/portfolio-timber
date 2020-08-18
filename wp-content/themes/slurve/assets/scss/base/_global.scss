@@ -1,0 +1,128 @@
+body {
+  background: $white;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  box-sizing: border-box;
+  color: $black;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin-left: $spacer;
+}
+
+.wysiwyg {
+  li {
+    margin-bottom: $spacer;
+  }
+}
+
+p {
+  margin: 0 0 1.1rem;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.2;
+
+  em {
+    color: $primary;
+    font-style: normal;
+  }
+}
+
+.headline-h1 {
+  @include fontSize(30px);
+  font-weight: 700;
+  margin-bottom: $spacer * 2.5;
+
+  @include media-breakpoint-up(lg) {
+    @include fontSize(40px);
+  }
+}
+
+.headline-h2 {
+  @include fontSize(26px);
+  margin-bottom: $spacer * 2.5;
+  font-weight: 700;
+
+  @include media-breakpoint-up(lg) {
+    @include fontSize(34px);
+  }
+}
+
+.headline-h3 {
+  @include fontSize(20px);
+  font-weight: 700;
+  margin-bottom: $spacer * 2.5;
+}
+
+.btn {
+  text-transform: uppercase;
+  padding: $spacer/1.5 $spacer * 1.2;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .btn {
+    width: 70%;
+    display: block;
+    margin-bottom: $spacer;
+    text-align: left;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+
+    .btn {
+      text-align: center;
+      width: auto;
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.alm-btn-wrap {
+  margin: $spacer 0;
+
+  .button:disabled,
+  .button[disabled] {
+    visibility: hidden;
+  }
+}

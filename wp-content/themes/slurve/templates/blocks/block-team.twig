@@ -1,0 +1,23 @@
+<div class="block block-team">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {% include 'partials/team-toggle.twig' %}
+        <p class="text-desc text-investment-team">
+          {{ block.block_team__text_invest }}
+        </p>
+        <p class="text-desc text-advisors">
+          {{ block.block_team__text_advisors }}
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="grid">
+        {% for person in team_members %}
+          {% include 'partials/person.twig' %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

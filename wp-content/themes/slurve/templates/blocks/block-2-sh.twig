@@ -1,0 +1,30 @@
+<div class="block block-2-sh">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="headline-h2">
+          {{ block.block_2_sh__headline }}
+        </h2>
+      </div>
+      <div class="col-md-4 block-2-sh__nav">
+        {% set count = 0 %}
+        {% for item in block.block_2_sh__list %}
+          {% set count = count + 1 %}
+          <a href="#item-{{ count }}" {{ count == 1 ? 'class="active"' }}>
+            {{ item.list_headline }}
+          </a>
+        {% endfor %}
+      </div>
+      <div class="col-md-8 block-2-sh__text">
+        {% set count = 0 %}
+        {% for item in block.block_2_sh__list %}
+          {% set count = count + 1 %}
+          <div class="list-item {{ count == 1 ? 'active' }}"
+            id="item-{{ count }}">
+            {{ item.list_text }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

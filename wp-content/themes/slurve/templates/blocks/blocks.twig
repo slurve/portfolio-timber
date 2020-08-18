@@ -1,0 +1,10 @@
+<div class="blocks">
+  {% for block in post.meta('blocks') %}
+    {% set layout =
+      block.acf_fc_layout|replace({
+        '_': '-'
+      })
+    %}
+    {% include 'blocks/' ~ layout ~ '.twig' %}
+  {% endfor %}
+</div>

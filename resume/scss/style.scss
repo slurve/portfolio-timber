@@ -1,0 +1,232 @@
+@import "bourbon/bourbon";
+@import "base/grid-settings";
+@import "neat/neat";
+@import "base/font-awesome";
+
+body {
+	font-family: 'proxima-nova', sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+	margin: 0;
+
+	@include media($large) {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+}
+
+.container {
+	@include outer-container();
+	font-size: 1.1em;
+	color: #646464;
+}
+
+p {
+	margin: 0 0 25px 0;
+
+	@include media($large) {
+		margin-bottom: 45px;
+	}
+
+}
+
+a {
+	text-decoration: none;
+	color: #00A1DC;
+
+	&:hover {
+		color: #777;
+	}
+
+}
+
+header {
+	background: #f2f2f2 url(images/bg.png);
+	padding: 60px 0 40px 0;
+
+	@include media($large) {
+		padding: 100px 0 80px 0;
+	}
+
+	.lead {
+		@include outer-container;
+		padding: 0 10px;
+
+		@include media($medium) {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+
+	}
+
+	.name {
+		text-align: center;
+
+		@include media($medium) {
+			@include span-columns(5);
+			text-align: left;
+		}
+
+		@include media($large) {
+			@include span-columns(6);
+		}
+
+	}
+
+	.contact {
+
+		@include media($medium) {
+			@include span-columns(7);
+		}
+		
+		@include media($large) {
+			@include span-columns(6);
+		}
+
+	}
+
+	h1 {
+		font-size: 2.2em;
+		font-weight: 300;
+		color: #fff;
+		margin: 0 0 5px -4px;
+
+		@include media($large) {
+			font-size: 3.2em;
+			margin-bottom: 15px;
+		}
+
+	}
+
+	h2 {
+		color: #ccc;
+		border-bottom: none;
+	}
+
+	ul {
+		margin: 25px auto 0 auto;
+		padding: 0;
+		text-align: center;
+
+		@include media($medium) {
+			margin: 15px 0 0 0;
+			float: right;
+		}
+
+	}
+
+	li {
+		margin: 0 0 5px 0;
+		padding: 0;
+		list-style-type: none;
+		color: #999;
+
+		@include media($medium) {
+			margin: 0 20px 0 0;
+			display: inline;
+		}
+
+	}
+
+}
+
+.job {
+	margin-top: 25px;
+}
+
+h2 {
+	font-size: 0.85em;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	color: darken(#ccc,10%);
+	margin: 0 0 15px 0;
+	text-transform: uppercase;
+	border-bottom: 1px dotted lighten(#888,30%);
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight: 900;
+	margin: 0 0 5px 0;
+}
+
+h4 {
+	font-size: 0.8em;
+	line-height: 1.3em;
+	font-weight: 600;
+	color: #9a9a9a;
+	margin: 0 0 15px 0;
+}
+
+main {
+	padding: 40px 20px 0 20px;
+
+	@include media($medium) {
+		@include span-columns(8);
+		padding: 80px 50px;
+	} 
+
+}
+
+aside {
+	padding: 0 20px;
+	color: #888;
+
+	@include media($medium) {
+		@include span-columns(4);
+		padding-top: 80px;
+	} 
+
+	ul {
+		list-style-type: none;
+		margin: 0 0 35px 0;
+		padding: 0;
+		color: #999;
+		font-size: 0.9em;
+	}
+
+	span {
+		display: none;
+		font-size: 0.75em;
+
+		@include media($large) {
+			display: inline-block;
+		}
+
+	}
+
+	li {
+		margin: 0 0 2px 0;
+		padding: 0;
+	}
+
+	a {
+		font-weight: 900;
+	}
+
+	p {
+		font-size: 0.9em;
+		line-height: 1.4em;
+	}
+
+	.social li {
+		@include media($large) {
+			display: inline;
+			margin-right: 20px;		
+		}
+	}
+
+}
+
+footer {
+	background: #f2f2f2 url(images/bg.png);
+	padding: 20px 0;
+	color: #fff;
+	text-align: center;
+
+	p {
+		margin: 0;
+	}
+
+}

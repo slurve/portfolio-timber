@@ -1,0 +1,97 @@
+.gform_wrapper {
+  background-color: $white;
+  border-radius: $border-radius;
+  padding: $spacer * 2;
+
+  [type="text"],
+  [type="email"],
+  [type="tel"],
+  .textarea,
+  .gfield_select {
+    width: 100%;
+    border: 0;
+    border: 1px solid $gray-300;
+    font-size: 1rem;
+    border-radius: $border-radius;
+    padding: 10px;
+    outline: none;
+    color: $black;
+    -webkit-appearance: none;
+
+    ::-webkit-input-placeholder,
+    ::-moz-placeholder,
+    ::-ms-input-placeholder,
+    ::-moz-placeholder {
+      color: $gray-400;
+    }
+  }
+
+  .btn-primary {
+    padding-left: 0;
+    padding-right: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .gfield_select {
+    cursor: pointer;
+    position: relative;
+    background-color: $white;
+    color: $black;
+    background-image: url(../assets/images/carat.svg);
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px 12px;
+    @include fontSize(16px);
+  }
+
+  .button {
+    width: 100%;
+    display: block;
+    -webkit-appearance: none;
+  }
+
+  .gfield_label,
+  .ginput_complex label {
+    color: $gray;
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: block;
+
+    &.gfield_label_before_complex {
+      display: none;
+    }
+  }
+
+  .gfield_required {
+    margin-left: 3px;
+  }
+
+  .gfield {
+    margin-bottom: $spacer;
+  }
+
+  .gform_title {
+    color: $black;
+    @include fontSize(24px);
+    margin: 0 0 $spacer * 1.5;
+  }
+
+  .ginput_complex {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .validation_error {
+    display: none;
+  }
+
+  .validation_message {
+    color: $danger;
+    @include fontSize(13px);
+    margin-top: 3px;
+  }
+}

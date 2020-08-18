@@ -1,0 +1,29 @@
+.error404 {
+  background-color: $gray-100;
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .block-error404 {
+    &__image {
+      @include media-breakpoint-down(md) {
+        margin-top: $spacer * 8;
+      }
+    }
+
+    &__text {
+      @include media-breakpoint-up(lg) {
+        padding-left: $spacer * 2;
+      }
+
+      .headline-h1 {
+        max-width: 480px;
+        color: $primary;
+        margin-bottom: $spacer * 1.5;
+      }
+    }
+  }
+}

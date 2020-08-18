@@ -1,0 +1,39 @@
+<div class="block block-slider">
+  <div class="container">
+    <div class="slider">
+      {% for slide in block.block_slider__data %}
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <img src="{{ Image(slide.slide_image).src }}"
+                alt="{{ Image(slide.slide_image).alt }}" />
+            </div>
+            <div class="col-lg-8 slide-text">
+              <h2 class="headline-h2">
+                {{ slide.slide_headline }}
+              </h2>
+              <p>
+                {{ slide.slide_text }}
+              </p>
+              <div class="stats">
+                {% for stat in slide.slide_stat %}
+                  <div class="stats__item">
+                    <p>
+                      <strong>{{ stat.stat_number }}</strong>
+                    </p>
+                    <p>
+                      {{ stat.stat_text }}
+                    </p>
+                  </div>
+                {% endfor %}
+              </div>
+              <p class="source">
+                {{ slide.slide_source }}
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
