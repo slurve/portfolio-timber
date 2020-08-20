@@ -1,104 +1,18 @@
 .footer {
-  background-color: var(--color-gray);
-  padding: 3.6rem 0;
-  color: var(--color-gray6);
-  text-align: center;
-  position: relative;
+  grid-area: footer;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  @include fontSize(13px);
   z-index: 2;
 
-  @include breakpoint(medium) {
-    text-align: left;
+  @include breakpoint(large) {
+    @include fontSize(15px);
+    line-height: 1.8;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  &__inner {
-    display: flex;
-    flex-direction: column;
-
-    @include breakpoint(medium) {
-      flex-direction: row;
-    }
-  }
-
-  &__col {
-    padding: 0 var(--spacing-default) var(--spacing-text);
-
-    @include breakpoint(medium) {
-      padding: 0 50px;
-
-      &:first-child {
-        padding-left: 0;
-        padding-right: 160px;
-      }
-
-      &:last-child {
-        padding-right: 0;
-        border-right: 0;
-      }
-    }
-
-    li {
-      margin-bottom: 0.7rem;
-      font-size: 0.8rem;
-
-      @include breakpoint(medium) {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-      }
-    }
-
-    a {
-      color: var(--color-gray6);
-
-      &:hover {
-        color: var(--color-gray5);
-      }
-
-      &:active {
-        color: var(--color-gray7);
-      }
-    }
-
-    .nav-title a {
-      font-size: 1rem;
-      pointer-events: none;
-      cursor: auto;
-      color: var(--color-gray5);
-
-      @include breakpoint(medium) {
-        font-size: 1.125rem;
-      }
-    }
-  }
-
-  .mark {
-    width: 50px;
-
-    @include breakpoint(medium) {
-      width: 75px;
-    }
-  }
-
-  .legal {
-    font-size: 0.8rem;
-    line-height: 1.4rem;
-    color: var(--color-gray5);
-
-    @include breakpoint(medium) {
-      font-size: 1.05rem;
-      line-height: 1.5rem;
-    }
-  }
-
-  .blog-share {
-    margin: var(--spacing-text) 0;
-
-    @include breakpoint(medium) {
-      margin-left: -50px;
-    }
-
-    svg {
-      margin: 0;
-      width: 55px;
-    }
+  a {
+    color: var(--color-light);
   }
 }

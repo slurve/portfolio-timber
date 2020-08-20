@@ -11,15 +11,6 @@
   --color-light: #fff;
   --color-muted: #8a95a4;
   --color-gray: #383c43;
-  --color-gray1: #fafcfe;
-  --color-gray2: #f2f4f7;
-  --color-gray3: #edf0f4;
-  --color-gray4: #e3e7ed;
-  --color-gray5: #b2bdca;
-  --color-gray6: #8a95a4;
-  --color-gray7: #5c6b7f;
-  --color-gray8: #383c43;
-  --color-gray6: #8a95a4;
   --color-border: #eee;
   --color-blue: #3db7d3;
   --color-shaded: #fafafa;
@@ -28,14 +19,8 @@
   /* layout */
   --spacing-default: 4rem;
   --spacing-default-sm: 2rem;
-  --spacing-headline: 1.6rem;
-  --spacing-box: 2rem;
-  --spacing-text: 1.2rem;
   --max-width: 1200px;
   --max-width-component: 760px;
-  --max-width-padded-1: 1000px;
-  --max-width-padded-2: 900px;
-  --max-width-block: 363px;
   --header-height-sm: 72px;
   --header-height: 80px;
 
@@ -46,5 +31,6 @@
 }
 
 $header-height: 90px;
+$header-height-sm: 60px;
 $spacing-default: 4rem;
 $spacing-box: 2rem;

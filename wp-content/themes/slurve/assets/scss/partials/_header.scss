@@ -3,44 +3,77 @@
 }
 
 .header {
-  width: 100%;
-  position: sticky;
+  grid-area: header;
+  position: absolute;
   top: 0;
-  background: var(--color-light);
-  border-bottom: 1px solid #eee;
-  height: var(--header-height-sm);
-  z-index: 3;
+  left: 0;
+  width: 100%;
+  height: $header-height-sm;
+  background-color: var(--color-light);
+  z-index: 9999;
 
-  @include breakpoint(medium) {
-    height: var(--header-height);
+  @include breakpoint(large) {
+    height: $header-height;
+  }
+
+  &.is-stuck {
+    position: fixed;
+    top: -$header-height-sm;
+    left: 0;
+    background-color: var(--color-light);
+    box-shadow: 0 4px 4px -2px rgba(#eee, 0.5);
+    animation-name: nav_in_sm;
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(0.66, 0.01, 0.82, 0.96) 0.4s;
+    animation-delay: 0;
+    animation-fill-mode: both;
+
+    @include breakpoint(large) {
+      height: 80px;
+      animation-name: nav_in;
+      top: -$header-height;
+
+      .header__inner {
+        height: 80px;
+      }
+
+      .logo img {
+        width: 180px;
+      }
+
+      .nav-login {
+        display: none;
+      }
+
+      .nav-link {
+        align-items: center;
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__inner {
-    height: 100%;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 30px;
     display: flex;
-    align-items: center;
+    height: $header-height-sm;
+    justify-content: space-between;
+
+    @include breakpoint(large) {
+      height: $header-height;
+    }
   }
 
   .logo {
-    flex: 1 1 20%;
     display: flex;
     align-items: center;
 
-    a {
-      display: flex;
-      align-items: center;
-    }
+    img {
+      width: 100px;
+      margin-top: 2px;
 
-    svg {
-      height: 65px;
-      margin-left: -20px;
+      @include breakpoint(large) {
+        width: 240px;
+        margin-top: 0;
+      }
     }
-  }
-
-  .nav-main {
-    flex: 1 1 80%;
   }
 }
