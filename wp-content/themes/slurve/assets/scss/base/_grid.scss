@@ -1,0 +1,29 @@
+@mixin breakpoint($class) {
+  @if $class == small {
+    @media (max-width: 499px) {
+      @content;
+    }
+  } @else if $class == landscape {
+    @media (min-width: 500px) {
+      @content;
+    }
+  } @else if $class == medium {
+    @media (min-width: 740px) {
+      @content;
+    }
+  } @else if $class == nav-break {
+    @media (max-width: 1023px) {
+      @content;
+    }
+  } @else if $class == large {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else if $class == full {
+    @media (min-width: 1260px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: small, landscape, medium, nav-break, large, full";
+  }
+}

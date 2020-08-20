@@ -1,0 +1,21 @@
+.alm-listing {
+  display: grid;
+  justify-content: center;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  margin: var(--spacing-box) 0 var(--spacing-default);
+
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.alm-btn-wrap {
+  text-align: center;
+  margin: var(--spacing-default) auto 0;
+
+  .button:disabled,
+  .button[disabled] {
+    visibility: hidden;
+  }
+}

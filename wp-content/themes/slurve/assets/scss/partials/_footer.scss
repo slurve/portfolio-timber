@@ -1,37 +1,104 @@
 .footer {
-  grid-area: footer;
-  background-color: #222;
-  color: $white;
-  padding: $spacer * 2 0 0;
-  @include fontSize(13px);
-  line-height: 1.6;
+  background-color: var(--color-gray);
+  padding: 3.6rem 0;
+  color: var(--color-gray6);
+  text-align: center;
+  position: relative;
   z-index: 2;
 
-  @include media-breakpoint-up(lg) {
-    @include fontSize(15px);
-    line-height: 1.8;
-    padding-left: 0;
-    padding-right: 0;
+  @include breakpoint(medium) {
+    text-align: left;
   }
 
-  a {
-    color: $white;
-  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
 
-  h3 {
-    text-transform: uppercase;
-    margin-bottom: $spacer/1.5;
-
-    @include media-breakpoint-up(lg) {
-      margin-bottom: $spacer * 1.2;
+    @include breakpoint(medium) {
+      flex-direction: row;
     }
   }
 
-  .social {
-    margin-top: $spacer;
+  &__col {
+    padding: 0 var(--spacing-default) var(--spacing-text);
+
+    @include breakpoint(medium) {
+      padding: 0 50px;
+
+      &:first-child {
+        padding-left: 0;
+        padding-right: 160px;
+      }
+
+      &:last-child {
+        padding-right: 0;
+        border-right: 0;
+      }
+    }
+
+    li {
+      margin-bottom: 0.7rem;
+      font-size: 0.8rem;
+
+      @include breakpoint(medium) {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    a {
+      color: var(--color-gray6);
+
+      &:hover {
+        color: var(--color-gray5);
+      }
+
+      &:active {
+        color: var(--color-gray7);
+      }
+    }
+
+    .nav-title a {
+      font-size: 1rem;
+      pointer-events: none;
+      cursor: auto;
+      color: var(--color-gray5);
+
+      @include breakpoint(medium) {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  .mark {
+    width: 50px;
+
+    @include breakpoint(medium) {
+      width: 75px;
+    }
+  }
+
+  .legal {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    color: var(--color-gray5);
+
+    @include breakpoint(medium) {
+      font-size: 1.05rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .blog-share {
+    margin: var(--spacing-text) 0;
+
+    @include breakpoint(medium) {
+      margin-left: -50px;
+    }
 
     svg {
-      fill: $white;
+      margin: 0;
+      width: 55px;
     }
   }
 }

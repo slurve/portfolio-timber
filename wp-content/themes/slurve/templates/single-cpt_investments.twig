@@ -1,8 +1,0 @@
-{% extends 'base.twig' %}
-{% block content %}
-  {% for block in post.meta('blocks') %}
-    {% include 'blocks/block-portfolio.twig' %}
-  {% endfor %}
-  {% include 'blocks/block-portfolio-more.twig' %}
-  {% include 'blocks/block-collapse.twig' %}
-{% endblock %}

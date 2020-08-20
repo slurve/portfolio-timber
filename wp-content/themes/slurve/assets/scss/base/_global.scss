@@ -1,15 +1,20 @@
 body {
-  background: $white;
   margin: 0;
-  font-size: 16px;
-  line-height: 1.4;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  font-family: "GTA", sans-serif;
+  font-weight: 300;
+  color: var(--color-text);
   box-sizing: border-box;
-  color: $black;
 
-  @include media-breakpoint-up(lg) {
-    font-size: 20px;
+  @include breakpoint(large) {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  @include breakpoint(full) {
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 
@@ -20,109 +25,138 @@ body {
 }
 
 ul,
-ol {
-  padding-left: 0;
-  margin-left: $spacer;
-}
-
-.wysiwyg {
-  li {
-    margin-bottom: $spacer;
-  }
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 p {
-  margin: 0 0 1.1rem;
-}
-
-a {
-  color: $primary;
-  text-decoration: none;
-}
-
-blockquote {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 1.2rem;
 }
 
 img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.link-arrow {
+  &:hover {
+    border-bottom: 1px solid;
+  }
+}
+
 h1,
 h2,
-h3,
-h4 {
-  margin: 0;
-  line-height: 1.2;
+h3 {
+  margin: 0 0 var(--spacing-text);
+  color: var(--color-gray);
+}
 
-  em {
-    color: $primary;
-    font-style: normal;
+.head-display {
+  font-size: 2.5rem;
+  line-height: 3.125rem;
+
+  @include breakpoint(large) {
+    font-size: 2.6875rem;
+    line-height: 3.375rem;
+  }
+
+  @include breakpoint(full) {
+    font-size: 3rem;
+    line-height: 3.75rem;
   }
 }
 
-.headline-h1 {
-  @include fontSize(30px);
-  font-weight: 700;
-  margin-bottom: $spacer * 2.5;
+.head-primary {
+  font-size: 2.1875rem;
+  line-height: 2.8125rem;
 
-  @include media-breakpoint-up(lg) {
-    @include fontSize(40px);
+  @include breakpoint(large) {
+    font-size: 2.3125rem;
+    line-height: 3rem;
+  }
+
+  @include breakpoint(full) {
+    font-size: 2.625rem;
+    line-height: 3.375rem;
   }
 }
 
-.headline-h2 {
-  @include fontSize(26px);
-  margin-bottom: $spacer * 2.5;
-  font-weight: 700;
+.head-secondary,
+.blog-post h2 {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 500;
 
-  @include media-breakpoint-up(lg) {
-    @include fontSize(34px);
+  @include breakpoint(large) {
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+  }
+
+  @include breakpoint(full) {
+    font-size: 2.375rem;
+    line-height: 2.8125rem;
   }
 }
 
-.headline-h3 {
-  @include fontSize(20px);
-  font-weight: 700;
-  margin-bottom: $spacer * 2.5;
-}
+.head-tertiary {
+  font-size: 1.5625rem;
+  line-height: 2.0625rem;
 
-.btn {
-  text-transform: uppercase;
-  padding: $spacer/1.5 $spacer * 1.2;
-}
-
-.btns {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  .btn {
-    width: 70%;
-    display: block;
-    margin-bottom: $spacer;
-    text-align: left;
+  @include breakpoint(large) {
+    font-size: 1.6875rem;
+    line-height: 2.25rem;
   }
 
-  @include media-breakpoint-up(md) {
-    flex-direction: row;
-
-    .btn {
-      text-align: center;
-      width: auto;
-      display: inline-block;
-      margin-right: 10px;
-      margin-bottom: 0;
-    }
+  @include breakpoint(full) {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
   }
 }
 
-.alm-btn-wrap {
-  margin: $spacer 0;
+.head-sub {
+  font-size: 1.125rem;
+  line-height: 1.8125rem;
+  font-weight: 300;
 
-  .button:disabled,
-  .button[disabled] {
-    visibility: hidden;
+  @include breakpoint(large) {
+    font-size: 1.25rem;
+    line-height: 1.9375rem;
   }
+
+  @include breakpoint(full) {
+    font-size: 1.375rem;
+    line-height: 2.125rem;
+  }
+}
+
+.head-sub--md {
+  font-weight: 500;
+}
+
+.text-source {
+  font-size: 0.75rem;
+  line-height: 1.0625rem;
+
+  @include breakpoint(full) {
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+  }
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-gray8 {
+  color: var(--color-gray8);
+}
+
+.color-gray7 {
+  color: var(--color-gray7);
 }

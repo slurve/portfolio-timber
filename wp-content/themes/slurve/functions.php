@@ -135,22 +135,6 @@ function add_slug_body_class($classes)
 }
 add_filter('body_class', 'add_slug_body_class');
 
-//Quotes shortcode for Posts
-add_shortcode('quotes', 'quotes_shortcode');
-function quotes_shortcode($post)
-{
-  $post = get_the_ID();
-  $data = array(
-    'this_post' => get_field('news__quotes', $post)
-  );
-  // if (isset($atts['number'])) {
-  //   $number = sanitize_text_field($atts['number']);
-  // } else {
-  //   $number = false;
-  // }
-  return Timber::compile('partials/post-quotes.twig', $data);
-}
-
 /**
  * This ensures that Timber is loaded and available as a PHP class.
  * If not, it gives an error message to help direct developers on where to activate
@@ -201,13 +185,13 @@ class StarterSite extends Timber\Site
   /** This is where you can register custom post types. */
   public function register_post_types()
   {
-    // Staff
+    // Projects
     $labels = [
-      "name" => __("Team", ""),
-      "singular_name" => __("Team", "")
+      "name" => __("Projects", ""),
+      "singular_name" => __("Project", "")
     ];
     $args = [
-      "label" => __("Team", ""),
+      "label" => __("Project", ""),
       "labels" => $labels,
       "description" => "",
       "public" => true,
@@ -224,20 +208,20 @@ class StarterSite extends Timber\Site
       "capability_type" => "post",
       "map_meta_cap" => true,
       "hierarchical" => false,
-      "rewrite" => ["slug" => "team", "with_front" => false],
+      "rewrite" => ["slug" => "project", "with_front" => false],
       "query_var" => true,
       "supports" => ["title", "thumbnail", "revisions"],
-      "menu_icon" => "dashicons-admin-users"
+      "menu_icon" => "dashicons-laptop"
     ];
-    register_post_type("cpt_team", $args);
+    register_post_type("cpt_projects", $args);
 
-    // News
+    // Services
     $labels = [
-      "name" => __("News", ""),
-      "singular_name" => __("News", "")
+      "name" => __("Services", ""),
+      "singular_name" => __("Service", "")
     ];
     $args = [
-      "label" => __("News", ""),
+      "label" => __("Services", ""),
       "labels" => $labels,
       "description" => "",
       "public" => true,
@@ -254,48 +238,18 @@ class StarterSite extends Timber\Site
       "capability_type" => "post",
       "map_meta_cap" => true,
       "hierarchical" => false,
-      "rewrite" => ["slug" => "news", "with_front" => false],
+      "rewrite" => ["slug" => "service", "with_front" => false],
       "query_var" => true,
       "supports" => ["title", "editor", "thumbnail", "excerpt"],
-      "menu_icon" => "dashicons-media-text"
+      "menu_icon" => "dashicons-admin-tools"
     ];
-    register_post_type("cpt_news", $args);
-
-    // Investments
-    $labels = [
-      "name" => __("Investments", ""),
-      "singular_name" => __("Investments", "")
-    ];
-    $args = [
-      "label" => __("Investments", ""),
-      "labels" => $labels,
-      "description" => "",
-      "public" => true,
-      "publicly_queryable" => true,
-      "show_ui" => true,
-      "delete_with_user" => false,
-      "show_in_rest" => true,
-      "rest_base" => "",
-      "rest_controller_class" => "WP_REST_Posts_Controller",
-      "has_archive" => false,
-      "show_in_menu" => true,
-      "show_in_nav_menus" => true,
-      "exclude_from_search" => false,
-      "capability_type" => "post",
-      "map_meta_cap" => true,
-      "hierarchical" => false,
-      "rewrite" => ["slug" => "investments", "with_front" => false],
-      "query_var" => true,
-      "supports" => ["title"],
-      "menu_icon" => "dashicons-media-text"
-    ];
-    register_post_type("cpt_investments", $args);
+    register_post_type("cpt_services", $args);
   }
 
   /** This is where you can register custom taxonomies. */
   public function register_taxonomies()
   {
-    // Team - Type
+    // Project - Type
     $args = [
       "label" => __("Type", ""),
       "labels" => [
@@ -309,11 +263,11 @@ class StarterSite extends Timber\Site
       "show_in_menu" => true,
       "show_in_nav_menus" => true,
       "query_var" => true,
-      "rewrite" => ['slug' => 'team-type', 'with_front' => false],
+      "rewrite" => ['slug' => 'project-type', 'with_front' => false],
       "show_admin_column" => true,
       "show_in_quick_edit" => true
     ];
-    register_taxonomy("team_type", "cpt_team", $args);
+    register_taxonomy("project_type", "cpt_projects", $args);
   }
 
   /** This is where you add some context
@@ -338,7 +292,6 @@ class StarterSite extends Timber\Site
     // social
     $context['social__linkedin'] = get_field('social__linkedin', 'options');
     $context['social__twitter'] = get_field('social__twitter', 'options');
-    $context['social__medium'] = get_field('social__medium', 'options');
 
     // contact
     $context['contact__address'] = get_field('contact__address', 'options');
@@ -348,48 +301,27 @@ class StarterSite extends Timber\Site
     // promo boxes
     $context['promo__boxes'] = get_field('promo__box', 'options');
 
-    // 404
-    $context['error404__headline'] = get_field('error404__headline', 'options');
-    $context['error404__text'] = get_field('error404__text', 'options');
-    $context['error404__image'] = get_field('error404__image', 'options');
-
     // search results
     $context['search_term'] = get_search_query();
 
     // team type
-    $context['team_type'] = Timber::get_terms('team_type');
+    $context['project_type'] = Timber::get_terms('project_type');
     $context['single_cat_title'] = single_cat_title('', false);
 
     // menus
     $context['menu_main'] = new Timber\Menu('Main');
 
-    // investments
-    $context['investments'] = Timber::get_posts([
-      'post_type' => 'cpt_investments',
+    // projects
+    $context['projects'] = Timber::get_posts([
+      'post_type' => 'cpt_projects',
       'posts_per_page' => -1
     ]);
 
-    // investments, but not current
-    $context['investments_more'] = Timber::get_posts([
-      'post_type' => 'cpt_investments',
-      'posts_per_page' => 3,
-      'post__not_in' => [get_the_ID()]
-    ]);
-
-    // news
-    $context['news'] = Timber::get_posts([
-      'post_type' => 'cpt_news',
-      'posts_per_page' => 1
-    ]);
-
-    // team members
-    $context['team_members'] = Timber::get_posts([
-      'post_type' => 'cpt_team',
+    // services
+    $context['services'] = Timber::get_posts([
+      'post_type' => 'cpt_services',
       'posts_per_page' => -1
     ]);
-
-    // team type
-    $context['team_types'] = Timber::get_terms('team_type');
 
     // misc
     $context['logo'] = new Timber\Image(

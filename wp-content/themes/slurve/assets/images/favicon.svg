@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs />
+  <defs>
+    <style>
+      .cls-1 { fill: #383c43; }
+      @media (prefers-color-scheme: dark) {
+        .cls-1 { fill: #fff; }
+      }
+      .cls-2 { fill: #1cbc97; }
+    </style>
+  </defs>
+  <g>
+    <path d="M0 32V10.2h7V32z" class="cls-1" />
+    <path d="M9.7 25.04h6.96V32H9.7zM0 0h6.96v6.96H0z" class="cls-2" />
+    <path d="M19.42 20.4h6.96V32h-6.96z" class="cls-1" />
+    <path d="M19.43 17.15V10.2h7v7z" class="cls-2" />
+    <path d="M9.7 21.8V10.2h7v11.6z" class="cls-1" />
+    <path fill="none" d="M0 0h32v32H0z" />
+  </g>
+</svg>
