@@ -1,5 +1,44 @@
-<div class="block-portfolio">
-  <p>
-    portfolio
-  </p>
+<div class="block block-portfolio">
+  <div class="container">
+    <nav class="projects-nav">
+      <a class="active" href="#">Website Design</a>
+      <a href="#">WordPress Development</a>
+    </nav>
+    <div class="projects">
+      {% for project in projects %}
+        <div class="project">
+          <div class="text">
+            <h4>
+              {{ project.title }}
+            </h4>
+            <a class="url" href="{{ project.project__url }}" target="_blank">
+              {{ project.project__url_nice }}
+            </a>
+            <p>
+              {{ project.project__summary }}
+            </p>
+          </div>
+          <div class="screen">
+            <a href="{{ project.project__url }}" target="_blank">
+              <picture>
+                <source srcset="{{ Image(project.project__image).src
+                    |resize(430, 400)
+                    |towebp }}"
+                  type="image/webp" />
+                <source srcset="{{ Image(project.project__image).src
+                    |tojpg
+                    |resize(430, 400) }}"
+                  type="image/jpg" />
+                <img src="{{ Image(project.project__image).src|resize(
+                    430,
+                    400
+                  ) }}"
+                  alt="{{ Image(project.project__image).alt }}" />
+              </picture>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>

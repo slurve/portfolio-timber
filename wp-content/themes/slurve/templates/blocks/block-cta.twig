@@ -1,5 +1,13 @@
-<div class="block-cta">
-  <p>
-    cta
-  </p>
+<div class="block block-cta">
+  <div class="container">
+    <div class="block--inner">
+      <h2>
+        {{ cta__headline }}
+      </h2>
+      <p>
+        {{ cta__text }}
+      </p>
+      <a class="button" href="{{ cta__link.url }}">{{ cta__link.title }}</a>
+    </div>
+  </div>
 </div>

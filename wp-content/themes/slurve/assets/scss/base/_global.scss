@@ -1,20 +1,18 @@
 body {
   margin: 0;
   font-size: 15px;
-  line-height: 23px;
-  font-family: "GTA", sans-serif;
+  line-height: 1.6;
+  font-family: sofia-pro, sans-serif;
   font-weight: 300;
   color: var(--color-text);
   box-sizing: border-box;
 
   @include breakpoint(large) {
-    font-size: 16px;
-    line-height: 25px;
+    @include fontSize(16px);
   }
 
   @include breakpoint(full) {
-    font-size: 18px;
-    line-height: 28px;
+    @include fontSize(18px);
   }
 }
 
@@ -32,7 +30,11 @@ li {
 }
 
 p {
-  margin: 0 0 1.2rem;
+  margin: 0 0 var(--spacer-small);
+
+  &.large {
+    @include fontSize(22px);
+  }
 }
 
 img {
@@ -46,7 +48,31 @@ a {
 
 h1,
 h2,
+h3,
+h4 {
+  margin: 0 0 var(--spacer-small);
+  font-weight: 700;
+  line-height: 1;
+}
+
+h1 {
+  @include fontSize(82px);
+}
+
+h2 {
+  @include fontSize(48px);
+  color: var(--color-gray);
+}
+
 h3 {
-  margin: 0 0 var(--spacing-text);
+  @include fontSize(16px);
+  color: var(--color-gray);
+  margin-bottom: var(--spacer-tiny);
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+
+h4 {
+  @include fontSize(32px);
   color: var(--color-gray);
 }

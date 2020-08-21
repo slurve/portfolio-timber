@@ -1,0 +1,44 @@
+.block-wysiwyg {
+  p {
+    margin-bottom: var(--spacer-small);
+  }
+
+  ul,
+  ol {
+    padding: 0 0 0 2rem;
+    margin: 0 0 var(--spacing-box);
+
+    li {
+      margin: 0 0 0.5rem;
+      padding: 0;
+    }
+  }
+
+  ul li {
+    list-style-type: disc;
+  }
+
+  ol li {
+    list-style-type: decimal;
+  }
+
+  .alignright {
+    float: right;
+    margin: 0 0 var(--spacing-box) var(--spacing-box);
+  }
+
+  .alignleft {
+    float: left;
+    margin: 0 var(--spacing-box) var(--spacing-box) 0;
+  }
+
+  .aligncenter {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .alignnone {
+    margin-top: var(--spacing-default);
+    margin-bottom: var(--spacing-default);
+  }
+}

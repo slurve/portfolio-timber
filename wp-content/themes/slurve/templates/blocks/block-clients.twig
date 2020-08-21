@@ -1,7 +1,16 @@
-<div class="block-clients">
+<div class="block block-clients">
   <div class="container">
-    <p>
-      clients
-    </p>
+    <div class="logos">
+      <div class="text">
+        <p class="large">
+          {{ clients__text }}
+        </p>
+      </div>
+      {% for logo in clients__logos %}
+        <div class="logo">
+          <img src="{{ Image(logo).src }}" alt="{{ Image(logo).alt }}" />
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>

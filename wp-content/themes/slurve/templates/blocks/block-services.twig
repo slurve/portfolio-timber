@@ -1,7 +1,31 @@
-<div class="block-services">
+<div class="block block-services">
   <div class="container">
-    <p>
-      services
+    <h2>
+      {{ block.block_services__headline }}
+    </h2>
+    <p class="large">
+      {{ block.block_services__text }}
     </p>
+    <div class="services">
+      {% for service in services %}
+        <div class="service">
+          <h3>
+            {{ service.service__label }}
+          </h3>
+          <h4>
+            {{ service.title }}
+          </h4>
+          <p class="pricing">
+            {{ service.service__pricing }}
+          </p>
+          <div class="summary">
+            {{ service.service__summary }}
+          </div>
+          <a class="button" href="{{ service.service__link.url }}">
+            {{ service.service__link.title }}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>

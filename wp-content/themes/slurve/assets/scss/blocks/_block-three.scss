@@ -1,0 +1,25 @@
+.block-three {
+  text-align: center;
+
+  .cols {
+    margin-top: var(--spacer);
+
+    @include breakpoint(large) {
+      display: flex;
+      justify-content: center;
+    }
+
+    .col {
+      @include fontSize(16px);
+
+      @include breakpoint(large) {
+        flex: 1 1 33.333%;
+      }
+    }
+
+    p {
+      max-width: var(--max-width-col);
+      margin: 0 auto;
+    }
+  }
+}

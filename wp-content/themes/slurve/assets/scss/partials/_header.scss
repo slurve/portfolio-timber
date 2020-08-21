@@ -11,6 +11,7 @@
   height: $header-height-sm;
   background-color: var(--color-light);
   z-index: 9999;
+  padding: var(--spacer-small) var(--spacer);
 
   @include breakpoint(large) {
     height: $header-height;
@@ -54,6 +55,7 @@
 
   &__inner {
     display: flex;
+    align-items: center;
     height: $header-height-sm;
     justify-content: space-between;
 
@@ -61,19 +63,18 @@
       height: $header-height;
     }
   }
+}
 
-  .logo {
+.nav-main {
+  ul {
     display: flex;
-    align-items: center;
 
-    img {
-      width: 100px;
-      margin-top: 2px;
-
-      @include breakpoint(large) {
-        width: 240px;
-        margin-top: 0;
-      }
+    li {
+      margin: 0 0 0 var(--spacer);
     }
+  }
+
+  .nav-link {
+    font-weight: 700;
   }
 }

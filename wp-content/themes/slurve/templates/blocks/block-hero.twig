@@ -1,7 +1,25 @@
-<div class="block-hero">
+<div class="block block-hero">
   <div class="container">
-    <p>
-      hero
+    <h1>
+      {{ block.block_hero__headline }}
+    </h1>
+    <p class="large">
+      {{ block.block_hero__text }}
     </p>
+    {% if block.block_hero__images %}
+      <div class="screens">
+        {% for screen in block.block_hero__images %}
+          <picture>
+            <source srcset="{{ Image(screen).src|resize(430, 400)|towebp }}"
+              type="image/webp" />
+            <source srcset="{{ Image(screen).src|tojpg|resize(430, 400) }}"
+              type="image/jpg" />
+            <img class="screen"
+              src="{{ Image(screen).src|resize(430, 400) }}"
+              alt="{{ Image(screen).alt }}" />
+          </picture>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 </div>

@@ -314,10 +314,10 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5f3ecd81b5f64",
-                            "label": "Text",
-                            "name": "block_clients__text",
-                            "type": "textarea",
+                            "key": "field_5f3fecc64e83f",
+                            "label": "Services loop will load here.",
+                            "name": "",
+                            "type": "message",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -326,53 +326,9 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": ""
-                        },
-                        {
-                            "key": "field_5f3ecd81b5f65",
-                            "label": "Logos",
-                            "name": "block_clients__logos",
-                            "type": "gallery",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "medium",
-                            "insert": "append",
-                            "library": "all",
-                            "min": "",
-                            "max": "",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_5f3ecdd503651",
-                            "label": "Link",
-                            "name": "block_clients__link",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array"
+                            "message": "",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -477,10 +433,10 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5f3ed82ce2a7b",
-                            "label": "Headline",
-                            "name": "block_cta__headline",
-                            "type": "text",
+                            "key": "field_5f4016d774e41",
+                            "label": "CTA will load here.",
+                            "name": "",
+                            "type": "message",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -489,47 +445,20 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5f3ed82ce2a7c",
-                            "label": "Text",
-                            "name": "block_cta__text",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": ""
-                        },
-                        {
-                            "key": "field_5f3ed842e2a7e",
-                            "label": "Link",
-                            "name": "block_cta__link",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array"
+                            "message": "",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
                         }
                     ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f3f17d6d61fe": {
+                    "key": "layout_5f3f17d6d61fe",
+                    "name": "block_collapse",
+                    "label": "Collapse",
+                    "display": "block",
+                    "sub_fields": [],
                     "min": "",
                     "max": ""
                 }
@@ -571,5 +500,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1597954672
+    "modified": 1598035683
 }

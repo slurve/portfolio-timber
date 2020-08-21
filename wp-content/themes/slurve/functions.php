@@ -245,8 +245,14 @@ class StarterSite extends Timber\Site
     $context['contact__email'] = get_field('contact__email', 'options');
     $context['contact__phone'] = get_field('contact__phone', 'options');
 
-    // promo boxes
-    $context['promo__boxes'] = get_field('promo__box', 'options');
+    // options page - clients
+    $context['clients__logos'] = get_field('clients__logos', 'options');
+    $context['clients__text'] = get_field('clients__text', 'options');
+
+    // options page - cta
+    $context['cta__headline'] = get_field('cta__headline', 'options');
+    $context['cta__text'] = get_field('cta__text', 'options');
+    $context['cta__link'] = get_field('cta__link', 'options');
 
     // search results
     $context['search_term'] = get_search_query();

@@ -1,27 +1,11 @@
 {
-    "key": "group_5f3d611204993",
-    "title": "CPT - Project",
+    "key": "group_5f401690bcdd1",
+    "title": "Options - CTA",
     "fields": [
         {
-            "key": "field_5f3d611a9cef3",
-            "label": "URL",
-            "name": "project__url",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_5f400db98ec73",
-            "label": "URL (Nice)",
-            "name": "project__url_nice",
+            "key": "field_5f4016aa89050",
+            "label": "Headline",
+            "name": "cta__headline",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -38,10 +22,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_5f3d612c9cef4",
-            "label": "Summary",
-            "name": "project__summary",
-            "type": "wysiwyg",
+            "key": "field_5f401690c2f7a",
+            "label": "Text",
+            "name": "cta__text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -51,16 +35,16 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
-            "key": "field_5f3d61fe73209",
-            "label": "Image",
-            "name": "project__image",
-            "type": "image",
+            "key": "field_5f4016be89051",
+            "label": "Link",
+            "name": "cta__link",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -69,24 +53,15 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "return_format": "array"
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "options_page",
                 "operator": "==",
-                "value": "cpt_projects"
+                "value": "acf-options"
             }
         ]
     ],
@@ -113,5 +88,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1598033357
+    "modified": 1598035660
 }

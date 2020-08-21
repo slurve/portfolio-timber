@@ -2,17 +2,15 @@
   grid-area: footer;
   background-color: var(--color-dark);
   color: var(--color-light);
-  @include fontSize(13px);
+  @include fontSize(15px);
   z-index: 2;
-
-  @include breakpoint(large) {
-    @include fontSize(15px);
-    line-height: 1.8;
-    padding-left: 0;
-    padding-right: 0;
-  }
+  text-align: center;
 
   a {
     color: var(--color-light);
+  }
+
+  .info {
+    margin: var(--spacer) auto 0;
   }
 }

@@ -1,7 +1,24 @@
-<div class="block-three">
+<div class="block block-three">
   <div class="container">
-    <p>
-      three columns
+    <h2>
+      {{ block.block_three__headline }}
+    </h2>
+    <p class="large">
+      {{ block.block_three__text }}
     </p>
+    {% if block.block_three__columns %}
+      <div class="cols">
+        {% for col in block.block_three__columns %}
+          <div class="col">
+            <h3>
+              {{ col.col_label }}
+            </h3>
+            <p>
+              {{ col.col_text }}
+            </p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 </div>

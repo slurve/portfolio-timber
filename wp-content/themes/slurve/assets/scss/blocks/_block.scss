@@ -1,0 +1,14 @@
+.block {
+  margin: 0 0 var(--spacer-large);
+
+  &--inner {
+    max-width: var(--max-width-block);
+    margin: 0 auto;
+  }
+
+  .large {
+    max-width: var(--max-width-block);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

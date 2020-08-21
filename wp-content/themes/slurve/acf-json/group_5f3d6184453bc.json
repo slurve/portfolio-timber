@@ -22,6 +22,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5f3fe9a8bbc6b",
+            "label": "Pricing",
+            "name": "service__pricing",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5f3d61844cff7",
             "label": "Summary",
             "name": "service__summary",
@@ -112,5 +131,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1597858289
+    "modified": 1598024116
 }

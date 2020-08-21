@@ -1,0 +1,26 @@
+.block-hero {
+  text-align: center;
+  padding: var(--spacer-large) 0 0;
+
+  .page-home & {
+    padding-bottom: var(--spacer-large);
+  }
+
+  .screens {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacer);
+
+    picture {
+      margin: 0 var(--spacer-small);
+      @extend %shadow;
+    }
+
+    picture:first-child {
+      position: absolute;
+      top: 20%;
+      left: 30%;
+    }
+  }
+}

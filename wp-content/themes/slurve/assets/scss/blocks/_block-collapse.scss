@@ -1,0 +1,7 @@
+.block-collapse {
+  margin-top: -$spacer-large;
+
+  @include breakpoint(large) {
+    margin-top: -$spacer-large;
+  }
+}

@@ -1,0 +1,78 @@
+.projects-nav {
+  margin: -40px auto var(--spacer);
+  padding: var(--spacer-small);
+  text-align: center;
+  border-top: 1px dotted var(--color-border);
+  border-bottom: 1px dotted var(--color-border);
+
+  a {
+    @include fontSize(16px);
+    font-weight: 700;
+    margin: 0 20px;
+    color: var(--color-gray-light);
+
+    &.active {
+      color: var(--color-gray);
+    }
+  }
+}
+
+.project {
+  border-bottom: 1px dotted var(--color-border);
+  display: flex;
+  justify-content: center;
+  overflow-y: hidden;
+  margin-bottom: var(--spacer);
+}
+
+.text {
+  flex: 1 1 50%;
+  padding: 0 var(--spacer);
+
+  h4 {
+    margin-bottom: 2px;
+  }
+
+  p {
+    margin-bottom: var(--spacer);
+  }
+
+  .url {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--color-gray-light);
+    @include fontSize(15px);
+    margin-bottom: var(--spacer-small);
+  }
+}
+
+.screen {
+  flex: 1 1 50%;
+  position: relative;
+
+  img {
+    box-shadow: var(--box-shadow);
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    margin: 0 auto -12px;
+
+    &:hover {
+      animation-delay: 0;
+      animation-duration: 0.4s;
+      animation-fill-mode: both;
+      animation-name: screenHover;
+      animation-timing-function: cubic-bezier(0.66, 0.01, 0.82, 0.96) 0.4s;
+    }
+  }
+}
+
+@keyframes screenHover {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, -12px, 0);
+  }
+}
