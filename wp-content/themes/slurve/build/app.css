@@ -9,6 +9,7 @@
 :root {
   /* colors */
   --color-primary: #555;
+  --color-red: #ea1919;
   --color-primary-hover: #19d1a7;
   --color-primary-active: #00755a;
   --color-text: #000;
@@ -24,10 +25,12 @@
   --spacer: 4rem;
   --spacer-tiny: 0.75rem;
   --spacer-small: 1.5rem;
+  --spacer-medium: 3rem;
   --spacer-large: 6rem;
   --spacer-jumbo: 10rem;
   --max-width: 1200px;
   --max-width-block: 700px;
+  --max-width-wide: 940px;
   --max-width-col: 260px;
   --header-height-sm: 72px;
   --header-height: 80px;
@@ -127,16 +130,16 @@ h2 {
   color: var(--color-gray); }
 
 h3 {
-  font-size: 16px;
-  font-size: 1rem;
-  color: var(--color-gray);
+  font-size: 17px;
+  font-size: 1.0625rem;
+  color: var(--color-gray-light);
   margin-bottom: var(--spacer-tiny);
   text-transform: uppercase;
   letter-spacing: 0.75px; }
 
 h4 {
-  font-size: 32px;
-  font-size: 2rem;
+  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--color-gray); }
 
 .gform_wrapper {
@@ -274,7 +277,8 @@ h4 {
   .footer a {
     color: var(--color-light); }
   .footer .info {
-    margin: var(--spacer) auto 0; }
+    margin: var(--spacer) auto 0;
+    font-weight: 700; }
 
 .skip-link {
   display: none; }
@@ -403,7 +407,8 @@ h4 {
     .block-hero .screens picture:first-child {
       position: absolute;
       top: 20%;
-      left: 30%; }
+      left: 30%;
+      z-index: 2; }
 
 .projects-nav {
   margin: -40px auto var(--spacer);
@@ -469,13 +474,14 @@ h4 {
   .block-services .services {
     display: grid;
     grid-gap: var(--spacer-small);
-    margin-top: var(--spacer); }
+    margin: var(--spacer) auto;
+    max-width: var(--max-width-wide); }
     @media (min-width: 740px) {
       .block-services .services {
         grid-template-columns: repeat(2, 1fr); } }
   .block-services .service {
     background-color: var(--color-shaded);
-    padding: var(--spacer);
+    padding: var(--spacer-medium);
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px; }
     .block-services .service:nth-child(2) {
@@ -488,13 +494,24 @@ h4 {
       border-top-right-radius: 20px;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 20px; }
+    .block-services .service h3 {
+      font-size: 13px;
+      font-size: 0.8125rem; }
     .block-services .service h4 {
-      margin-bottom: 10px; }
+      margin-bottom: 0; }
     .block-services .service .pricing {
       font-size: 15px;
       font-size: 0.9375rem;
       color: var(--color-gray-light);
-      margin: 0 0 var(--spacer-small); }
+      margin: 0 0 var(--spacer-small);
+      position: relative; }
+      .block-services .service .pricing::before {
+        width: 80px;
+        height: 1px;
+        border-top: 1px solid #ccc;
+        content: " ";
+        display: block;
+        margin: 20px auto 10px; }
     .block-services .service .summary {
       margin-bottom: var(--spacer-small); }
 

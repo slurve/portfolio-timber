@@ -4,7 +4,8 @@
   .services {
     display: grid;
     grid-gap: var(--spacer-small);
-    margin-top: var(--spacer);
+    margin: var(--spacer) auto;
+    max-width: var(--max-width-wide);
 
     @include breakpoint(medium) {
       grid-template-columns: repeat(2, 1fr);
@@ -13,7 +14,7 @@
 
   .service {
     background-color: var(--color-shaded);
-    padding: var(--spacer);
+    padding: var(--spacer-medium);
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
 
@@ -31,14 +32,28 @@
       border-bottom-left-radius: 20px;
     }
 
+    h3 {
+      @include fontSize(13px);
+    }
+
     h4 {
-      margin-bottom: 10px;
+      margin-bottom: 0;
     }
 
     .pricing {
       @include fontSize(15px);
       color: var(--color-gray-light);
       margin: 0 0 var(--spacer-small);
+      position: relative;
+
+      &::before {
+        width: 80px;
+        height: 1px;
+        border-top: 1px solid #ccc;
+        content: " ";
+        display: block;
+        margin: 20px auto 10px;
+      }
     }
 
     .summary {

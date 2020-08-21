@@ -65,14 +65,14 @@ h2 {
 }
 
 h3 {
-  @include fontSize(16px);
-  color: var(--color-gray);
+  @include fontSize(17px);
+  color: var(--color-gray-light);
   margin-bottom: var(--spacer-tiny);
   text-transform: uppercase;
   letter-spacing: 0.75px;
 }
 
 h4 {
-  @include fontSize(32px);
+  @include fontSize(30px);
   color: var(--color-gray);
 }

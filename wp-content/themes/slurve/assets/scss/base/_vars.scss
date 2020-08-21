@@ -1,6 +1,7 @@
 :root {
   /* colors */
   --color-primary: #555;
+  --color-red: #ea1919;
   --color-primary-hover: #19d1a7;
   --color-primary-active: #00755a;
   --color-text: #000;
@@ -17,10 +18,12 @@
   --spacer: 4rem;
   --spacer-tiny: 0.75rem;
   --spacer-small: 1.5rem;
+  --spacer-medium: 3rem;
   --spacer-large: 6rem;
   --spacer-jumbo: 10rem;
   --max-width: 1200px;
   --max-width-block: 700px;
+  --max-width-wide: 940px;
   --max-width-col: 260px;
   --header-height-sm: 72px;
   --header-height: 80px;
