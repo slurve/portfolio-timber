@@ -334,6 +334,33 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5f4c3921d9538": {
+                    "key": "layout_5f4c3921d9538",
+                    "name": "block_maintenance",
+                    "label": "Maintenance",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f4c3921d9539",
+                            "label": "Maintenance plans will load here.",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5f3ed7bca9f45": {
                     "key": "layout_5f3ed7bca9f45",
                     "name": "block_services",
@@ -475,6 +502,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cpt_services"
+            }
         ]
     ],
     "menu_order": 0,
@@ -500,5 +534,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1598035683
+    "modified": 1598830920
 }

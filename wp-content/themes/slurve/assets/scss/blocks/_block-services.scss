@@ -17,6 +17,8 @@
     padding: var(--spacer-medium);
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
 
     &:nth-child(2) {
       border-top-left-radius: 0;
@@ -58,6 +60,11 @@
 
     .summary {
       margin-bottom: var(--spacer-small);
+    }
+
+    .button {
+      margin: auto auto 0;
+      display: inline-block;
     }
   }
 }

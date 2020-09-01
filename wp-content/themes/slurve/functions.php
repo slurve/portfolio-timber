@@ -249,6 +249,9 @@ class StarterSite extends Timber\Site
     $context['clients__logos'] = get_field('clients__logos', 'options');
     $context['clients__text'] = get_field('clients__text', 'options');
 
+    // options page - plans
+    $context['plans__list'] = get_field('plans__list', 'options');
+
     // options page - cta
     $context['cta__headline'] = get_field('cta__headline', 'options');
     $context['cta__text'] = get_field('cta__text', 'options');

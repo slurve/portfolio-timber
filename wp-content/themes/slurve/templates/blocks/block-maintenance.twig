@@ -1,0 +1,25 @@
+<div class="block block-maintenance">
+  <div class="container">
+    <div class="plans">
+      {% for plan in plans__list %}
+        <div class="plan">
+          <h2>
+            {{ plan.plan_title }}
+          </h2>
+          <h3>
+            {{ plan.plan_price }}
+            {% if plan.plan_notes %}
+              <span class="notes">{{ plan.plan_notes }}</span>
+            {% endif %}
+          </h3>
+          <ul>
+            {% for feature in plan.plan_features %}
+              <li>{{ feature.list_feature }}</li>
+            {% endfor %}
+          </ul>
+          <a href="{{ plan.plan_link.url }}" class="button">Start plan</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
