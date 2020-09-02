@@ -9,15 +9,17 @@
     <div class="services">
       {% for service in services %}
         <div class="service">
-          <h3>
-            {{ service.service__label }}
-          </h3>
-          <h4>
-            {{ service.title }}
-          </h4>
-          <p class="pricing">
-            {{ service.service__pricing }}
-          </p>
+          <a href="{{ service.service__link.url }}">
+            <h3>
+              {{ service.service__label }}
+            </h3>
+            <h4>
+              {{ service.title }}
+            </h4>
+            <p class="pricing">
+              {{ service.service__pricing }}
+            </p>
+          </a>
           <div class="summary">
             {{ service.service__summary }}
           </div>

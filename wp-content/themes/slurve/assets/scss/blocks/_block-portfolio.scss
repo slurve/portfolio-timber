@@ -1,3 +1,9 @@
+.page-portfolio .all-projects,
+.term-wordpress-development .wordpress-development,
+.term-website-design .website-design {
+  color: var(--color-primary);
+}
+
 .projects-nav {
   margin: -40px auto var(--spacer);
   padding: var(--spacer-small);
@@ -10,6 +16,11 @@
     font-weight: 700;
     margin: 0 20px;
     color: var(--color-gray-light);
+    display: inline-block;
+
+    @include breakpoint(medium) {
+      display: inline;
+    }
 
     &.active {
       color: var(--color-gray);
@@ -18,51 +29,79 @@
 }
 
 .project {
-  border-bottom: 1px dotted var(--color-border);
-  display: flex;
-  justify-content: center;
-  overflow-y: hidden;
-  margin-bottom: var(--spacer);
-}
+  padding-top: var(--spacer-large);
 
-.text {
-  flex: 1 1 50%;
-  padding: 0 var(--spacer);
+  @include breakpoint(medium) {
+    border-bottom: 1px dotted var(--color-border);
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
 
-  h4 {
-    margin-bottom: 2px;
+    &:nth-child(2n) .text {
+      order: 2;
+    }
+
+    &:nth-child(2n) .screen {
+      order: 1;
+    }
   }
 
-  p {
-    margin-bottom: var(--spacer);
+  &:first-child {
+    padding-top: var(--spacer);
   }
 
-  .url {
-    display: inline-block;
-    font-weight: 700;
-    color: var(--color-gray-light);
-    @include fontSize(15px);
+  .text {
+    flex: 1 1 50%;
+    order: 1;
+
+    @include breakpoint(medium) {
+      padding: 0 var(--spacer);
+    }
+
+    h4 {
+      margin-bottom: 2px;
+    }
+
+    .url {
+      display: inline-block;
+      font-weight: 700;
+      color: var(--color-gray-light);
+      @include fontSize(15px);
+      margin-bottom: var(--spacer-small);
+    }
+  }
+
+  .screen {
+    flex: 1 1 50%;
+    position: relative;
+    order: 2;
+    border-bottom: 1px dotted var(--color-border);
+    overflow-y: hidden;
     margin-bottom: var(--spacer-small);
-  }
-}
 
-.screen {
-  flex: 1 1 50%;
-  position: relative;
+    @include breakpoint(medium) {
+      border-bottom: 0;
+      overflow-y: visible;
+      margin-bottom: 0;
+    }
 
-  img {
-    box-shadow: var(--box-shadow);
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    margin: 0 auto -12px;
+    img {
+      box-shadow: var(--box-shadow);
+      display: block;
+      margin: 0 auto -12px;
+      max-width: 80%;
 
-    &:hover {
-      animation-delay: 0;
-      animation-duration: 0.4s;
-      animation-fill-mode: both;
-      animation-name: screenHover;
-      animation-timing-function: cubic-bezier(0.66, 0.01, 0.82, 0.96) 0.4s;
+      @include breakpoint(medium) {
+        max-width: 100%;
+      }
+
+      &:hover {
+        animation-delay: 0;
+        animation-duration: 0.4s;
+        animation-fill-mode: both;
+        animation-name: screenHover;
+        animation-timing-function: cubic-bezier(0.66, 0.01, 0.82, 0.96) 0.4s;
+      }
     }
   }
 }

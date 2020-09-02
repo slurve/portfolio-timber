@@ -7,4 +7,14 @@ jQuery(document).ready(function($) {
   //     "translate3d(0," + d + "px, 0)"
   //   );
   // });
+
+  /* show nav after 410px */
+  var stickyHeaderTop = $(".header").offset().top + 310;
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > stickyHeaderTop) {
+      $(".header").addClass("is-stuck");
+    } else {
+      $(".header").removeClass("is-stuck");
+    }
+  });
 });

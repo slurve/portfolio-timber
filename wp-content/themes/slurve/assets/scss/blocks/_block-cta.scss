@@ -1,5 +1,8 @@
 .block-cta {
-  background-color: var(--color-shaded);
-  padding: var(--spacer);
+  background-image: linear-gradient(
+    rgba(163, 163, 167, 0.08),
+    rgba(163, 163, 167, 0.16)
+  );
+  padding: var(--spacer-large) 0;
   text-align: center;
 }

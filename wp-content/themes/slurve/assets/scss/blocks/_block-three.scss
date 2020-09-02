@@ -3,18 +3,18 @@
 
   .cols {
     margin-top: var(--spacer);
+    display: grid;
+    grid-gap: var(--spacer);
+    grid-template-columns: 1fr;
 
     @include breakpoint(large) {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       justify-content: center;
     }
 
     .col {
       @include fontSize(16px);
-
-      @include breakpoint(large) {
-        flex: 1 1 33.333%;
-      }
     }
 
     p {

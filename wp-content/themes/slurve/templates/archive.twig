@@ -1,0 +1,26 @@
+{% extends 'base.twig' %}
+{% block content %}
+  <div class="block block-hero">
+    <div class="container">
+      <h1>
+        Our work
+      </h1>
+      <p class="large">
+        We’ve had the opportunity to work with dozens of amazing clients,
+        including small businesses, non-profits, startups and global brands.
+      </p>
+    </div>
+  </div>
+  <div class="block block-portfolio">
+    <div class="container">
+      {% include 'partials/projects-nav.twig' %}
+      <div class="projects">
+        {% for post in posts %}
+          {% include 'partials/project.twig' with {
+            project: post
+          } %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

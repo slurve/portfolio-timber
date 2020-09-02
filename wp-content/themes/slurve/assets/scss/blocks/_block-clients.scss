@@ -1,7 +1,8 @@
 .block-clients {
   text-align: center;
-  background-color: var(--color-shaded);
-  // background-image: linear-gradient(var(--color-light), var(--color-shaded));
+  border-top: 1px solid var(--color-shaded);
+  // background-color: var(--color-shaded);
+  background-image: linear-gradient(var(--color-light), var(--color-shaded));
   overflow: hidden;
   padding: var(--spacer-large) 0;
 
@@ -12,10 +13,14 @@
   }
 
   .logos {
-    padding-right: var(--spacer);
     display: grid;
     grid-gap: var(--spacer-small);
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint(large) {
+      padding-right: var(--spacer);
+      grid-template-columns: repeat(6, 1fr);
+    }
 
     .logo {
       background-color: var(--color-light);
@@ -35,20 +40,33 @@
     }
 
     .text {
-      grid-column-start: 5;
-      grid-column-end: span 4;
+      grid-column-start: 1;
+      grid-column-end: span 2;
       grid-row-start: 1;
-      grid-row-end: 3;
-      padding-left: var(--spacer-small);
-      display: flex;
-      align-items: center;
+      grid-row-end: span 2;
+      padding: var(--spacer-small);
+
+      @include breakpoint(large) {
+        display: flex;
+        align-items: center;
+        grid-column-start: 4;
+        grid-column-end: span 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        padding-left: var(--spacer-small);
+      }
 
       .large {
         margin: 0;
-        @include fontSize(24px);
+        @include fontSize(22px);
+        line-height: 1.5;
         font-weight: 700;
         text-align: left;
         color: var(--color-gray);
+
+        @include breakpoint(large) {
+          @include fontSize(28px);
+        }
       }
     }
   }

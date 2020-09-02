@@ -307,6 +307,33 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5f4e990bf3e04": {
+                    "key": "layout_5f4e990bf3e04",
+                    "name": "block_contact",
+                    "label": "Contact",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f4e9918f3e06",
+                            "label": "Contact block will load here.",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5f3ecd81b5f62": {
                     "key": "layout_5f3ecd81b5f62",
                     "name": "block_clients",
@@ -534,5 +561,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1598830920
+    "modified": 1598986546
 }

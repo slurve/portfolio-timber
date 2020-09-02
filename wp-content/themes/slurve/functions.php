@@ -64,13 +64,6 @@ function remove_menus()
 }
 add_action('admin_menu', 'remove_menus');
 
-/* Add class to Form Button */
-add_filter('gform_submit_button', 'form_submit_button', 10, 2);
-function form_submit_button($button, $form)
-{
-  return "<button class='btn btn-primary btn-block' id='gform_submit_button_{$form['id']}'><span>Submit</span></button>";
-}
-
 //Page Slug Body Class
 function add_slug_body_class($classes)
 {
@@ -210,7 +203,7 @@ class StarterSite extends Timber\Site
       "show_in_menu" => true,
       "show_in_nav_menus" => true,
       "query_var" => true,
-      "rewrite" => ['slug' => 'project-type', 'with_front' => false],
+      "rewrite" => ['slug' => 'portfolio/type', 'with_front' => false],
       "show_admin_column" => true,
       "show_in_quick_edit" => true
     ];
@@ -250,17 +243,42 @@ class StarterSite extends Timber\Site
     $context['clients__text'] = get_field('clients__text', 'options');
 
     // options page - plans
-    $context['plans__list'] = get_field('plans__list', 'options');
+    $context['plan_a_title'] = get_field('plan_a_title', 'options');
+    $context['plan_a_price'] = get_field('plan_a_price', 'options');
+    $context['plan_a_notes'] = get_field('plan_a_notes', 'options');
+    $context['plan_a_features'] = get_field('plan_a_features', 'options');
+    $context['plan_a_link'] = get_field('plan_a_link', 'options');
+    $context['plan_b_title'] = get_field('plan_b_title', 'options');
+    $context['plan_b_price'] = get_field('plan_b_price', 'options');
+    $context['plan_b_notes'] = get_field('plan_b_notes', 'options');
+    $context['plan_b_features'] = get_field('plan_b_features', 'options');
+    $context['plan_b_link'] = get_field('plan_b_link', 'options');
+    $context['plan_c_title'] = get_field('plan_c_title', 'options');
+    $context['plan_c_price'] = get_field('plan_c_price', 'options');
+    $context['plan_c_notes'] = get_field('plan_c_notes', 'options');
+    $context['plan_c_features'] = get_field('plan_c_features', 'options');
+    $context['plan_c_link'] = get_field('plan_c_link', 'options');
 
     // options page - cta
     $context['cta__headline'] = get_field('cta__headline', 'options');
     $context['cta__text'] = get_field('cta__text', 'options');
     $context['cta__link'] = get_field('cta__link', 'options');
 
+    // options page - contact
+    $context['contact__form_id'] = get_field('contact__form_id', 'options');
+    $context['contact__sidebar_title'] = get_field(
+      'contact__sidebar_title',
+      'options'
+    );
+    $context['contact__sidebar_text'] = get_field(
+      'contact__sidebar_text',
+      'options'
+    );
+
     // search results
     $context['search_term'] = get_search_query();
 
-    // team type
+    // terms
     $context['project_type'] = Timber::get_terms('project_type');
     $context['single_cat_title'] = single_cat_title('', false);
 

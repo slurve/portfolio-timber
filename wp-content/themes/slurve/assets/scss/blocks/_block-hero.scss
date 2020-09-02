@@ -13,15 +13,20 @@
     margin-top: var(--spacer);
 
     picture {
-      margin: 0 var(--spacer-small);
       @extend %shadow;
+
+      @include breakpoint(medium) {
+        margin: 0 var(--spacer-small);
+      }
     }
 
     picture:first-child {
-      position: absolute;
-      top: 20%;
-      left: 30%;
-      z-index: 2;
+      @include breakpoint(medium) {
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        z-index: 2;
+      }
     }
   }
 }

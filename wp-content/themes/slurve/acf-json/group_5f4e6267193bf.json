@@ -1,11 +1,68 @@
 {
     "key": "group_5f4e6267193bf",
-    "title": "Options - Maintenance Plans",
+    "title": "Options - Support - A",
     "fields": [
         {
-            "key": "field_5f4e6273634a1",
-            "label": "Plan",
-            "name": "plans__list",
+            "key": "field_5f4e628c634a2",
+            "label": "Title",
+            "name": "plan_a_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f4e6299634a3",
+            "label": "Price",
+            "name": "plan_a_price",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f4e6546ec06c",
+            "label": "Notes",
+            "name": "plan_a_notes",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f4e632448a6e",
+            "label": "Features",
+            "name": "plan_a_features",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -16,15 +73,15 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 3,
-            "max": 3,
+            "min": 0,
+            "max": 0,
             "layout": "block",
-            "button_label": "Add Plan",
+            "button_label": "Add Feature",
             "sub_fields": [
                 {
-                    "key": "field_5f4e628c634a2",
-                    "label": "Title",
-                    "name": "plan_title",
+                    "key": "field_5f4e635ac52c9",
+                    "label": "Feature",
+                    "name": "list_feature",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -41,10 +98,10 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5f4e6299634a3",
-                    "label": "Price",
-                    "name": "plan_price",
-                    "type": "text",
+                    "key": "field_5f4eaa41e2af4",
+                    "label": "Description",
+                    "name": "list_description",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -55,85 +112,26 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5f4e6546ec06c",
-                    "label": "Notes",
-                    "name": "plan_notes",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5f4e632448a6e",
-                    "label": "Features",
-                    "name": "plan_features",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 0,
-                    "layout": "table",
-                    "button_label": "",
-                    "sub_fields": [
-                        {
-                            "key": "field_5f4e635ac52c9",
-                            "label": "Feature",
-                            "name": "list_feature",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ]
-                },
-                {
-                    "key": "field_5f4e633548a6f",
-                    "label": "Link",
-                    "name": "plan_link",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": ""
                 }
             ]
+        },
+        {
+            "key": "field_5f4e633548a6f",
+            "label": "Link",
+            "name": "plan_a_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -153,5 +151,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1598973261
+    "modified": 1599008597
 }

@@ -1,25 +1,94 @@
 <div class="block block-maintenance">
   <div class="container">
     <div class="plans">
-      {% for plan in plans__list %}
-        <div class="plan">
-          <h2>
-            {{ plan.plan_title }}
-          </h2>
-          <h3>
-            {{ plan.plan_price }}
-            {% if plan.plan_notes %}
-              <span class="notes">{{ plan.plan_notes }}</span>
+      <div class="plan">
+        <h2>
+          {{ plan_a_title }}
+        </h2>
+        <h3>
+          {{ plan_a_price }}
+          {% if plan_a_notes %}
+            <span class="notes">{{ plan_a_notes }}</span>
+          {% endif %}
+        </h3>
+        <ul>
+          {% for feature in plan_a_features %}
+            <li>
+              <strong>{{ feature.list_feature }}</strong><p>
+                {{ feature.list_description }}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+        <a href="{{ plan_a_link.url }}" class="button">Start plan</a>
+      </div>
+      <div class="plan">
+        <h2>
+          {{ plan_b_title }}
+        </h2>
+        <h3>
+          {{ plan_b_price }}
+          {% if plan_b_notes %}
+            <span class="notes">{{ plan_b_notes }}</span>
+          {% endif %}
+        </h3>
+        <ul>
+          {% for feature in plan_a_features %}
+            <li>
+              <strong>{{ feature.list_feature }}</strong><p>
+                {{ feature.list_description }}
+              </p>
+            </li>
+          {% endfor %}
+          {% for feature in plan_b_features %}
+            <li>
+              <strong>{{ feature.list_feature }}</strong><p>
+                {{ feature.list_description }}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+        <a href="{{ plan_b_link.url }}" class="button">Start plan</a>
+      </div>
+      <div class="plan">
+        <h2>
+          {{ plan_c_title }}
+        </h2>
+        <h3>
+          {{ plan_c_price }}
+          {% if plan_c_notes %}
+            <span class="notes">{{ plan_c_notes }}</span>
+          {% endif %}
+        </h3>
+        <ul>
+          {% for feature in plan_a_features %}
+            <li>
+              <strong>{{ feature.list_feature }}</strong><p>
+                {{ feature.list_description }}
+              </p>
+            </li>
+          {% endfor %}
+          {% for feature in plan_b_features %}
+            {% if
+              feature.list_feature != '5% discount on hourly rate'
+                and feature.list_feature != 'Uptime monitoring every 60 min' %}
+              <li>
+                <strong>{{ feature.list_feature }}</strong><p>
+                  {{ feature.list_description }}
+                </p>
+              </li>
             {% endif %}
-          </h3>
-          <ul>
-            {% for feature in plan.plan_features %}
-              <li>{{ feature.list_feature }}</li>
-            {% endfor %}
-          </ul>
-          <a href="{{ plan.plan_link.url }}" class="button">Start plan</a>
-        </div>
-      {% endfor %}
+          {% endfor %}
+          {% for feature in plan_c_features %}
+            <li>
+              <strong>{{ feature.list_feature }}</strong><p>
+                {{ feature.list_description }}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+        <a href="{{ plan_c_link.url }}" class="button">Start plan</a>
+      </div>
     </div>
   </div>
 </div>

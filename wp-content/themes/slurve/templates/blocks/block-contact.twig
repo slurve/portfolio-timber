@@ -1,0 +1,18 @@
+<div class="block block-contact">
+  <div class="container">
+    <div class="block-contact__inner">
+      <div class="form">
+        {% filter shortcodes %}
+          [gravityform id="{{ contact__form_id }}" title="false"
+          description="false" ajax="true" tabindex="49"]
+        {% endfilter %}
+      </div>
+      <aside class="text">
+        <h3>
+          {{ contact__sidebar_title }}
+        </h3>
+        {{ contact__sidebar_text }}
+      </aside>
+    </div>
+  </div>
+</div>

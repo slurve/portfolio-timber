@@ -5,7 +5,6 @@
     display: grid;
     grid-gap: var(--spacer-small);
     margin: var(--spacer) auto;
-    max-width: var(--max-width-wide);
 
     @include breakpoint(medium) {
       grid-template-columns: repeat(2, 1fr);
@@ -13,25 +12,32 @@
   }
 
   .service {
-    background-color: var(--color-shaded);
-    padding: var(--spacer-medium);
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    background-image: linear-gradient(
+      rgba(163, 163, 167, 0.08),
+      rgba(163, 163, 167, 0.16)
+    );
+    padding: var(--spacer-small);
     display: flex;
     flex-direction: column;
 
-    &:nth-child(2) {
-      border-top-left-radius: 0;
-      border-top-right-radius: 20px;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 20px;
-    }
+    @include breakpoint(medium) {
+      padding: var(--spacer-medium);
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
 
-    &:nth-child(3) {
-      border-top-left-radius: 0;
-      border-top-right-radius: 20px;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 20px;
+      &:nth-child(2) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 20px;
+      }
+
+      &:nth-child(3) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 20px;
+      }
     }
 
     h3 {

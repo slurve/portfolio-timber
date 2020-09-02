@@ -1,3 +1,23 @@
+@keyframes nav_in_sm {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, $header-height-sm, 0);
+  }
+}
+
+@keyframes nav_in {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, $header-height, 0);
+  }
+}
+
 .skip-link {
   display: none;
 }
@@ -15,41 +35,49 @@
 
   @include breakpoint(large) {
     height: $header-height;
+
+    &.is-stuck {
+      position: fixed;
+      top: -$header-height;
+      height: $header-height-sm;
+      left: 0;
+      padding: 0 var(--spacer);
+      background-color: rgba(#fff, 0.98);
+      box-shadow: 0 4px 4px -2px rgba(#ddd, 0.5);
+      animation-name: nav_in_sm;
+      animation-duration: 0.4s;
+      animation-timing-function: cubic-bezier(0.66, 0.01, 0.82, 0.96) 0.4s;
+      animation-delay: 0;
+      animation-fill-mode: both;
+
+      @include breakpoint(large) {
+        animation-name: nav_in;
+
+        .header__inner {
+          height: $header-height-sm;
+        }
+
+        .logo svg {
+          width: 40px;
+          margin-bottom: -4px;
+        }
+
+        .nav-link {
+          align-items: center;
+          margin-bottom: 0;
+          @include fontSize(16px);
+        }
+      }
+    }
   }
 
-  &.is-stuck {
-    position: fixed;
-    top: -$header-height-sm;
-    left: 0;
-    background-color: var(--color-light);
-    box-shadow: 0 4px 4px -2px rgba(#eee, 0.5);
-    animation-name: nav_in_sm;
-    animation-duration: 0.4s;
-    animation-timing-function: cubic-bezier(0.66, 0.01, 0.82, 0.96) 0.4s;
-    animation-delay: 0;
-    animation-fill-mode: both;
+  .logo svg {
+    width: 60px;
+    height: 60px;
 
     @include breakpoint(large) {
+      width: 80px;
       height: 80px;
-      animation-name: nav_in;
-      top: -$header-height;
-
-      .header__inner {
-        height: 80px;
-      }
-
-      .logo img {
-        width: 180px;
-      }
-
-      .nav-login {
-        display: none;
-      }
-
-      .nav-link {
-        align-items: center;
-        margin-bottom: 0;
-      }
     }
   }
 
@@ -57,24 +85,69 @@
     display: flex;
     align-items: center;
     height: $header-height-sm;
-    justify-content: space-between;
+    justify-content: center;
 
     @include breakpoint(large) {
       height: $header-height;
+      justify-content: space-between;
     }
   }
 }
 
 .nav-main {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-light);
+  border-top: 1px solid var(--color-border);
+
+  @include breakpoint(medium) {
+    position: relative;
+    display: block;
+    width: auto;
+    background-color: none;
+    border-top: 0;
+  }
+
   ul {
     display: flex;
 
     li {
-      margin: 0 0 0 var(--spacer);
+      margin: 0 10px;
+      display: flex;
+      align-items: center;
+
+      @include breakpoint(medium) {
+        margin: 0 0 0 var(--spacer);
+      }
     }
   }
 
   .nav-link {
     font-weight: 700;
+    @include fontSize(13px);
+
+    @include breakpoint(medium) {
+      @include fontSize(18px);
+    }
   }
+
+  .button {
+    @include fontSize(11px);
+    padding: 5px 10px 7px;
+
+    @include breakpoint(medium) {
+      @include fontSize(16px);
+    }
+  }
+}
+
+.single-cpt_services .nav-services .nav-link,
+.current-menu-item .nav-link,
+.tax-project_type .nav-portfolio .nav-link {
+  color: var(--color-red);
 }
