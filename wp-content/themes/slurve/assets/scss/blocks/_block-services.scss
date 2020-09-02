@@ -12,10 +12,7 @@
   }
 
   .service {
-    background-image: linear-gradient(
-      rgba(163, 163, 167, 0.08),
-      rgba(163, 163, 167, 0.16)
-    );
+    background-color: var(--color-shaded);
     padding: var(--spacer-small);
     display: flex;
     flex-direction: column;

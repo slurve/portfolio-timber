@@ -1,10 +1,9 @@
 .block-clients {
   text-align: center;
-  border-top: 1px solid var(--color-shaded);
   // background-color: var(--color-shaded);
   background-image: linear-gradient(var(--color-light), var(--color-shaded));
   overflow: hidden;
-  padding: var(--spacer-large) 0;
+  padding-bottom: var(--spacer-large);
 
   .block-inner {
     display: flex;

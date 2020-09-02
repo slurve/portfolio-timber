@@ -19,7 +19,7 @@
   --color-gray: #383c43;
   --color-gray-light: #999;
   --color-border: #ddd;
-  --color-shaded: #eee;
+  --color-shaded: #f6f6f6;
   --color-error: red;
   /* layout */
   --spacer: 4rem;
@@ -380,6 +380,7 @@ h4 {
       position: relative;
       display: block;
       width: auto;
+      height: auto;
       background-color: none;
       border-top: 0; } }
   .nav-main ul {
@@ -415,10 +416,9 @@ h4 {
 
 .block-clients {
   text-align: center;
-  border-top: 1px solid var(--color-shaded);
   background-image: linear-gradient(var(--color-light), var(--color-shaded));
   overflow: hidden;
-  padding: var(--spacer-large) 0; }
+  padding-bottom: var(--spacer-large); }
   .block-clients .block-inner {
     display: flex;
     align-items: center;
@@ -486,6 +486,9 @@ h4 {
 
 .block-contact .text {
   flex: 1 1 35%; }
+  @media (min-width: 740px) {
+    .block-contact .text {
+      padding-left: var(--spacer); } }
 
 .block-cta {
   background-image: linear-gradient(rgba(163, 163, 167, 0.08), rgba(163, 163, 167, 0.16));
@@ -661,7 +664,7 @@ h4 {
       .block-services .services {
         grid-template-columns: repeat(2, 1fr); } }
   .block-services .service {
-    background-image: linear-gradient(rgba(163, 163, 167, 0.08), rgba(163, 163, 167, 0.16));
+    background-color: var(--color-shaded);
     padding: var(--spacer-small);
     display: flex;
     flex-direction: column; }
