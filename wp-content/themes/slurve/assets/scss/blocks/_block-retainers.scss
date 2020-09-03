@@ -1,0 +1,6 @@
+.cpt_services-monthly-retainers {
+  .block-wysiwyg {
+    @include fontSize(16px);
+    color: var(--color-gray);
+  }
+}

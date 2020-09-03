@@ -565,9 +565,10 @@ h4 {
     .plans .plan .notes {
       display: block;
       font-weight: 300;
-      margin-top: 8px;
-      font-size: 14px;
-      font-size: 0.875rem; }
+      margin-top: 12px;
+      font-size: 13px;
+      font-size: 0.8125rem;
+      color: var(--color-gray-light); }
     .plans .plan ul {
       margin: 36px; }
     .plans .plan li {
@@ -676,6 +677,11 @@ h4 {
     transform: translate3d(0, 0, 0); }
   to {
     transform: translate3d(0, -12px, 0); } }
+
+.cpt_services-monthly-retainers .block-wysiwyg {
+  font-size: 16px;
+  font-size: 1rem;
+  color: var(--color-gray); }
 
 .block-services {
   text-align: center; }

@@ -41,8 +41,9 @@
     .notes {
       display: block;
       font-weight: 300;
-      margin-top: 8px;
-      @include fontSize(14px);
+      margin-top: 12px;
+      @include fontSize(13px);
+      color: var(--color-gray-light);
     }
 
     ul {
