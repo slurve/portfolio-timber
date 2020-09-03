@@ -1,18 +1,18 @@
-<div class="block block-maintenance">
+<div class="block block-retainers">
   <div class="container">
     <div class="plans">
       <div class="plan">
         <h2>
-          {{ plan_a_title }}
+          {{ retainer_a_title }}
         </h2>
         <h3>
-          {{ plan_a_price }}
-          {% if plan_a_notes %}
-            <span class="notes">{{ plan_a_notes }}</span>
+          {{ retainer_a_price }}
+          {% if retainer_a_notes %}
+            <span class="notes">{{ retainer_a_notes }}</span>
           {% endif %}
         </h3>
         <ul>
-          {% for feature in plan_a_features %}
+          {% for feature in retainer_a_features %}
             <li>
               <strong>{{ feature.list_feature }}</strong><p>
                 {{ feature.list_description }}
@@ -20,20 +20,20 @@
             </li>
           {% endfor %}
         </ul>
-        {# <a href="{{ plan_a_link.url }}" class="button">Start plan</a> #}
+        {# <a href="{{ retainer_a_link.url }}" class="button">Start plan</a> #}
       </div>
       <div class="plan">
         <h2>
-          {{ plan_b_title }}
+          {{ retainer_b_title }}
         </h2>
         <h3>
-          {{ plan_b_price }}
-          {% if plan_b_notes %}
-            <span class="notes">{{ plan_b_notes }}</span>
+          {{ retainer_b_price }}
+          {% if retainer_b_notes %}
+            <span class="notes">{{ retainer_b_notes }}</span>
           {% endif %}
         </h3>
         <ul>
-          {% for feature in plan_b_features %}
+          {% for feature in retainer_b_features %}
             <li>
               <strong>{{ feature.list_feature }}</strong><p>
                 {{ feature.list_description }}
@@ -41,20 +41,20 @@
             </li>
           {% endfor %}
         </ul>
-        {# <a href="{{ plan_b_link.url }}" class="button">Start plan</a> #}
+        {# <a href="{{ retainer_b_link.url }}" class="button">Start plan</a> #}
       </div>
       <div class="plan">
         <h2>
-          {{ plan_c_title }}
+          {{ retainer_c_title }}
         </h2>
         <h3>
-          {{ plan_c_price }}
-          {% if plan_c_notes %}
-            <span class="notes">{{ plan_c_notes }}</span>
+          {{ retainer_c_price }}
+          {% if retainer_c_notes %}
+            <span class="notes">{{ retainer_c_notes }}</span>
           {% endif %}
         </h3>
         <ul>
-          {% for feature in plan_c_features %}
+          {% for feature in retainer_c_features %}
             <li>
               <strong>{{ feature.list_feature }}</strong><p>
                 {{ feature.list_description }}
@@ -62,7 +62,7 @@
             </li>
           {% endfor %}
         </ul>
-        {# <a href="{{ plan_c_link.url }}" class="button">Start plan</a> #}
+        {# <a href="{{ retainer_c_link.url }}" class="button">Start plan</a> #}
       </div>
     </div>
   </div>

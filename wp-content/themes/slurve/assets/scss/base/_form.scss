@@ -35,6 +35,16 @@
     }
   }
 
+  .gform_heading {
+    text-align: center;
+    margin-bottom: $spacer;
+
+    .gform_title {
+      text-transform: none;
+      letter-spacing: 0;
+    }
+  }
+
   .gfield_checkbox li {
     margin: 4px 0 0;
     display: flex;

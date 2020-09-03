@@ -1,11 +1,11 @@
 {
-    "key": "group_5f4e6267193bf",
-    "title": "Options - Retainer - A",
+    "key": "group_5f502ed3588de",
+    "title": "Options - Retainer - B",
     "fields": [
         {
-            "key": "field_5f4e628c634a2",
+            "key": "field_5f502ed35e5b9",
             "label": "Title",
-            "name": "retainer_a_title",
+            "name": "retainer_b_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,9 +22,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5f4e6299634a3",
+            "key": "field_5f502ed35e5c2",
             "label": "Price",
-            "name": "retainer_a_price",
+            "name": "retainer_b_price",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -41,9 +41,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5f4e6546ec06c",
+            "key": "field_5f502ed35e5cd",
             "label": "Notes",
-            "name": "retainer_a_notes",
+            "name": "retainer_b_notes",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -60,9 +60,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5f4e632448a6e",
+            "key": "field_5f502ed35e5d8",
             "label": "Features",
-            "name": "retainer_a_features",
+            "name": "retainer_b_features",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -79,7 +79,7 @@
             "button_label": "Add Feature",
             "sub_fields": [
                 {
-                    "key": "field_5f4e635ac52c9",
+                    "key": "field_5f502ed36bab1",
                     "label": "Feature",
                     "name": "list_feature",
                     "type": "text",
@@ -98,7 +98,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5f4eaa41e2af4",
+                    "key": "field_5f502ed36bac4",
                     "label": "Description",
                     "name": "list_description",
                     "type": "textarea",
@@ -119,9 +119,9 @@
             ]
         },
         {
-            "key": "field_5f4e633548a6f",
+            "key": "field_5f502ed35e5e0",
             "label": "Link",
-            "name": "retainer_a_link",
+            "name": "retainer_b_link",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -151,5 +151,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1599088987
+    "modified": 1599090440
 }

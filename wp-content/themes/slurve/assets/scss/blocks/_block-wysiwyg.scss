@@ -1,4 +1,8 @@
 .block-wysiwyg {
+  max-width: var(--max-width-wide);
+  margin-left: auto !important;
+  margin-right: auto !important;
+
   p {
     margin-bottom: var(--spacer-small);
   }

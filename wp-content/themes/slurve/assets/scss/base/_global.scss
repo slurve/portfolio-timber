@@ -67,7 +67,8 @@ h1 {
   }
 }
 
-h2 {
+h2,
+.gform_title {
   @include fontSize(28px);
   color: var(--color-gray);
 

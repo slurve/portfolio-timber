@@ -19,18 +19,29 @@
       margin-bottom: 4px;
       @include fontSize(32px);
       color: var(--color-red);
+      position: relative;
+
+      &::after {
+        width: 80px;
+        height: 1px;
+        border-top: 1px solid var(--color-red);
+        content: " ";
+        display: block;
+        margin: 20px auto 10px;
+      }
     }
 
     h3 {
       text-transform: none;
       letter-spacing: 0;
       @include fontSize(28px);
+      color: var(--color-dark);
     }
 
     .notes {
       display: block;
       font-weight: 300;
-      margin-top: 4px;
+      margin-top: 8px;
       @include fontSize(14px);
     }
 

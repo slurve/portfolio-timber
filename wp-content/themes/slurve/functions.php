@@ -259,6 +259,33 @@ class StarterSite extends Timber\Site
     $context['plan_c_features'] = get_field('plan_c_features', 'options');
     $context['plan_c_link'] = get_field('plan_c_link', 'options');
 
+    // options page - retainers
+    $context['retainer_a_title'] = get_field('retainer_a_title', 'options');
+    $context['retainer_a_price'] = get_field('retainer_a_price', 'options');
+    $context['retainer_a_notes'] = get_field('retainer_a_notes', 'options');
+    $context['retainer_a_features'] = get_field(
+      'retainer_a_features',
+      'options'
+    );
+    $context['retainer_a_link'] = get_field('retainer_a_link', 'options');
+    $context['retainer_b_title'] = get_field('retainer_b_title', 'options');
+    $context['retainer_b_price'] = get_field('retainer_b_price', 'options');
+    $context['retainer_b_notes'] = get_field('retainer_b_notes', 'options');
+    $context['retainer_b_features'] = get_field(
+      'retainer_b_features',
+      'options'
+    );
+    $context['retainer_b_link'] = get_field('retainer_b_link', 'options');
+
+    $context['retainer_c_title'] = get_field('retainer_c_title', 'options');
+    $context['retainer_c_price'] = get_field('retainer_c_price', 'options');
+    $context['retainer_c_notes'] = get_field('retainer_c_notes', 'options');
+    $context['retainer_c_features'] = get_field(
+      'retainer_c_features',
+      'options'
+    );
+    $context['retainer_c_link'] = get_field('retainer_c_link', 'options');
+
     // options page - cta
     $context['cta__headline'] = get_field('cta__headline', 'options');
     $context['cta__text'] = get_field('cta__text', 'options');
@@ -294,7 +321,8 @@ class StarterSite extends Timber\Site
     // services
     $context['services'] = Timber::get_posts([
       'post_type' => 'cpt_services',
-      'posts_per_page' => -1
+      'posts_per_page' => -1,
+      'post__not_in' => array(97, 96, 211)
     ]);
 
     // misc
