@@ -1,9 +1,8 @@
 .block-clients {
   text-align: center;
-  // background-color: var(--color-shaded);
-  background-image: linear-gradient(var(--color-light), var(--color-shaded));
+  background-image: linear-gradient(var(--color-shaded), var(--color-light));
   overflow: hidden;
-  padding-bottom: var(--spacer-large);
+  padding-top: var(--spacer-large);
 
   .block-inner {
     display: flex;
@@ -12,6 +11,9 @@
   }
 
   .logos {
+    border-bottom: 1px dotted var(--color-border);
+    padding-bottom: var(--spacer-large);
+
     display: grid;
     grid-gap: var(--spacer-small);
     grid-template-columns: repeat(2, 1fr);
