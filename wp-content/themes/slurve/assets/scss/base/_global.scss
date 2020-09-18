@@ -63,6 +63,10 @@ h1 {
   @include fontSize(34px);
 
   @include breakpoint(medium) {
+    @include fontSize(62px);
+  }
+
+  @include breakpoint(large) {
     @include fontSize(82px);
   }
 }
@@ -73,6 +77,10 @@ h2,
   color: var(--color-gray);
 
   @include breakpoint(medium) {
+    @include fontSize(38px);
+  }
+
+  @include breakpoint(large) {
     @include fontSize(48px);
   }
 }

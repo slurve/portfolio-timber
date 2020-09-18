@@ -17,6 +17,19 @@
       @include fontSize(16px);
     }
 
+    h3 {
+      position: relative;
+
+      &::after {
+        width: 80px;
+        height: 1px;
+        border-top: 1px solid #ccc;
+        content: " ";
+        display: block;
+        margin: 20px auto 10px;
+      }
+    }
+
     p {
       max-width: var(--max-width-col);
       margin: 0 auto;

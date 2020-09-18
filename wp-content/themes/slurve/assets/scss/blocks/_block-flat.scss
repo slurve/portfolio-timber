@@ -1,0 +1,16 @@
+.page-flat-support,
+.page-flat-retainers {
+  .nav-main,
+  .footer {
+    display: none;
+  }
+
+  .header__inner {
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .block-hero {
+    margin: 0 auto 50px !important;
+  }
+}

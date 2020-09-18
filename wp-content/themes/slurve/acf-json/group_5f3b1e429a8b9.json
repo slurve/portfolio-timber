@@ -224,9 +224,9 @@
                             "delay": 0
                         },
                         {
-                            "key": "field_5f3ed99aa09ba",
-                            "label": "Show Sidebar",
-                            "name": "block_wysiwyg__sidebar",
+                            "key": "field_5f64f2e36c3ae",
+                            "label": "Has Photo?",
+                            "name": "block_wysiwyg__has_photo",
                             "type": "true_false",
                             "instructions": "",
                             "required": 0,
@@ -243,16 +243,16 @@
                             "ui_off_text": ""
                         },
                         {
-                            "key": "field_5f3ed9b5a09bb",
-                            "label": "Image",
-                            "name": "block_wysiwyg__image",
+                            "key": "field_5f65044b068ae",
+                            "label": "Photo",
+                            "name": "block_wysiwyg__photo",
                             "type": "image",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": [
                                 [
                                     {
-                                        "field": "field_5f3ed99aa09ba",
+                                        "field": "field_5f64f2e36c3ae",
                                         "operator": "==",
                                         "value": "1"
                                     }
@@ -588,5 +588,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1599089258
+    "modified": 1600455925
 }

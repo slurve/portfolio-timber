@@ -1,19 +1,34 @@
-<div class="block block-wysiwyg">
+<div class="block block-wysiwyg {{ block.block_wysiwyg__has_photo ? 'two' }}">
   <div class="container">
-    {% if block.block_wysiwyg__sidebar %}
-      <div class="col-md-6">
+    {% if block.block_wysiwyg__has_photo %}
+      <div class="block-wysiwyg__inner">
         <div class="wysiwyg">
           {{ block.block_wysiwyg__text }}
         </div>
-      </div>
-      <div class="col-md-6">
-        <img src="{{ block.block_wysiwyg__image }}" alt="" />
+        <div class="photo">
+          <picture>
+            <source srcset="{{ Image(block.block_wysiwyg__photo).src
+                |resize(430, 400)
+                |towebp }}"
+              type="image/webp" />
+            <source srcset="{{ Image(block.block_wysiwyg__photo).src
+                |tojpg
+                |resize(430, 400) }}"
+              type="image/jpg" />
+            <img src="{{ Image(block.block_wysiwyg__photo).src|resize(
+                430,
+                400
+              ) }}"
+              alt="{{ Image(block.block_wysiwyg__photo).alt }}" />
+          </picture>
+          <p class="wp-caption-text">
+            {{ Image(block.block_wysiwyg__photo).caption }}
+          </p>
+        </div>
       </div>
     {% else %}
-      <div class="col">
-        <div class="wysiwyg">
-          {{ block.block_wysiwyg__text }}
-        </div>
+      <div class="wysiwyg">
+        {{ block.block_wysiwyg__text }}
       </div>
     {% endif %}
   </div>
