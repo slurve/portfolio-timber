@@ -10,12 +10,10 @@
       <div class="screens">
         {% for screen in block.block_hero__images %}
           <picture>
-            <source srcset="{{ Image(screen).src|resize(430, 400)|towebp }}"
-              type="image/webp" />
-            <source srcset="{{ Image(screen).src|tojpg|resize(430, 400) }}"
-              type="image/jpg" />
+            <source srcset="{{ Image(screen).src|towebp }}" type="image/webp" />
+            <source srcset="{{ Image(screen).src|tojpg }}" type="image/jpg" />
             <img class="screen"
-              src="{{ Image(screen).src|resize(430, 400) }}"
+              src="{{ Image(screen).src }}"
               alt="{{ Image(screen).alt }}" />
           </picture>
         {% endfor %}
