@@ -547,7 +547,8 @@ h4 {
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: var(--spacer-small); }
+    margin: var(--spacer-small) auto 0;
+    max-width: 86%; }
     @media (min-width: 740px) {
       .block-hero .screens {
         margin-top: var(--spacer); } }
