@@ -220,20 +220,12 @@ h4 {
   .gform_wrapper .gfield_select ::-moz-placeholder {
     color: #eee; }
 
-.gform_wrapper .gform_heading {
-  text-align: center;
-  margin-bottom: 4rem; }
-  .gform_wrapper .gform_heading .gform_title {
-    text-transform: none;
-    letter-spacing: 0; }
-
-.gform_wrapper .gfield_checkbox li {
-  margin: 4px 0 0;
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem; }
-  .gform_wrapper .gfield_checkbox li input {
-    margin-right: 8px; }
+.gform_wrapper .gfield_error [type="text"],
+.gform_wrapper .gfield_error [type="email"],
+.gform_wrapper .gfield_error [type="url"],
+.gform_wrapper .gfield_error [type="tel"],
+.gform_wrapper .gfield_error .gfield_select {
+  border-color: var(--color-error); }
 
 .gform_wrapper .gfield_select {
   position: relative; }
@@ -268,10 +260,10 @@ h4 {
   margin-bottom: 40px; }
 
 .gform_wrapper .validation_error {
+  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--color-error);
-  font-size: 0.95rem;
-  line-height: 1.2rem;
-  margin: 0 0 var(--spacing-text); }
+  margin: 0 0 var(--spacer-small); }
 
 .gform_wrapper .validation_message {
   color: var(--color-error);

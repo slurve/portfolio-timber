@@ -54,9 +54,7 @@ function add_scripts($post)
 }
 add_action('init', 'add_scripts');
 
-/*
- * Remove unneeded menus
- */
+// Remove unnedded menus
 function remove_menus()
 {
   remove_menu_page('index.php'); // Dashboard
@@ -64,7 +62,7 @@ function remove_menus()
 }
 add_action('admin_menu', 'remove_menus');
 
-//Page Slug Body Class
+// Add page slug to body class
 function add_slug_body_class($classes)
 {
   global $post;
@@ -74,6 +72,15 @@ function add_slug_body_class($classes)
   return $classes;
 }
 add_filter('body_class', 'add_slug_body_class');
+
+// Custom error message for Gravity Forms
+add_filter("gform_validation_message", "gwp_change_message", 10, 2);
+function gwp_change_message($message, $form)
+{
+  return '
+<div class="validation_error">Oops. Please adjust the fields below.</div>
+';
+}
 
 /**
  * This ensures that Timber is loaded and available as a PHP class.
