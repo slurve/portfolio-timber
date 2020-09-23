@@ -23,6 +23,7 @@
   --spacer-jumbo: 10rem;
   --max-width: 1200px;
   --max-width-block: 700px;
+  --max-width-block-small: 80%;
   --max-width-wide: 980px;
   --max-width-col: 260px;
   --header-height-sm: 72px;
@@ -36,7 +37,7 @@
 }
 
 $header-height: 90px;
-$header-height-sm: 72px;
+$header-height-sm: 90px;
 $spacer: 4rem;
 $spacer-small: 1.5rem;
 $spacer-large: 7rem;

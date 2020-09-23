@@ -16,7 +16,7 @@
     font-weight: 700;
     margin: 0 20px;
     color: var(--color-gray-light);
-    display: inline-block;
+    display: block;
 
     @include breakpoint(medium) {
       display: inline;

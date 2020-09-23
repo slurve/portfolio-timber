@@ -1,6 +1,10 @@
 .block-hero {
   text-align: center;
-  padding: var(--spacer-large) 0 0;
+  padding: var(--spacer-medium) 0 0;
+
+  @include breakpoint(medium) {
+    padding: var(--spacer-large) 0 0;
+  }
 
   .page-home & {
     padding-bottom: var(--spacer-large);
@@ -10,23 +14,22 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: var(--spacer);
+    margin-top: var(--spacer-small);
+
+    @include breakpoint(medium) {
+      margin-top: var(--spacer);
+    }
 
     picture {
       @extend %shadow;
-
-      @include breakpoint(medium) {
-        margin: 0 var(--spacer-small);
-      }
+      margin: 0 var(--spacer-small);
     }
 
     picture:first-child {
-      @include breakpoint(medium) {
-        position: absolute;
-        top: 20%;
-        left: 30%;
-        z-index: 2;
-      }
+      position: absolute;
+      top: 20%;
+      z-index: 2;
+      max-width: 50%;
     }
   }
 }

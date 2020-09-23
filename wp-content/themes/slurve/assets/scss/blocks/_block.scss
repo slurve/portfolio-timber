@@ -1,5 +1,9 @@
 .block {
-  margin: 0 0 var(--spacer-large);
+  margin: 0 0 var(--spacer);
+
+  @include breakpoint(medium) {
+    margin-bottom: var(--spacer-large);
+  }
 
   &--inner {
     max-width: var(--max-width-block);
@@ -7,8 +11,12 @@
   }
 
   .large {
-    max-width: var(--max-width-block);
+    max-width: var(--max-width-block-small);
     margin-left: auto;
     margin-right: auto;
+
+    @include breakpoint(medium) {
+      max-width: var(--max-width-block);
+    }
   }
 }

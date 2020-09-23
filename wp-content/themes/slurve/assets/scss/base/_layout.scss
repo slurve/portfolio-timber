@@ -1,13 +1,11 @@
-@include breakpoint(medium) {
-  .wrap {
-    display: grid;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-    height: 100vh;
-    grid-template-rows: var(--header-height) 1fr 200px;
-  }
+.wrap {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  height: 100vh;
+  grid-template-rows: var(--header-height) 1fr 200px;
 }
 
 .main {

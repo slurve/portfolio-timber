@@ -4,16 +4,17 @@
   .services {
     display: grid;
     grid-gap: var(--spacer-small);
-    margin: var(--spacer) auto;
+    margin: var(--spacer-small) auto;
 
     @include breakpoint(medium) {
+      margin: var(--spacer) auto;
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
   .service {
     background-color: var(--color-shaded);
-    padding: var(--spacer-small);
+    padding: var(--spacer) var(--spacer-small);
     display: flex;
     flex-direction: column;
 

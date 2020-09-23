@@ -28,14 +28,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: $header-height-sm;
+  height: $header-height;
   background-color: var(--color-light);
   z-index: 9999;
   padding: var(--spacer-small) var(--spacer);
 
   @include breakpoint(large) {
-    height: $header-height;
-
     &.is-stuck {
       position: fixed;
       top: -$header-height;
@@ -74,8 +72,10 @@
   .logo svg {
     width: 60px;
     height: 60px;
+    margin-top: 10px;
 
     @include breakpoint(large) {
+      margin-top: 0;
       width: 80px;
       height: 80px;
     }
@@ -84,11 +84,10 @@
   &__inner {
     display: flex;
     align-items: center;
-    height: $header-height-sm;
+    height: $header-height;
     justify-content: center;
 
     @include breakpoint(large) {
-      height: $header-height;
       justify-content: space-between;
     }
   }

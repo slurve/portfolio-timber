@@ -1,15 +1,11 @@
 body {
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
   font-family: sofia-pro, sans-serif;
   font-weight: 300;
   color: var(--color-text);
   box-sizing: border-box;
-
-  @include breakpoint(large) {
-    @include fontSize(16px);
-  }
 
   @include breakpoint(full) {
     @include fontSize(18px);

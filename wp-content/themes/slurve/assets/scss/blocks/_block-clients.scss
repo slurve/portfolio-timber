@@ -1,8 +1,11 @@
 .block-clients {
   text-align: center;
   background-image: linear-gradient(var(--color-shaded), var(--color-light));
-  overflow: hidden;
-  padding-top: var(--spacer-large);
+  padding: var(--spacer) 0 0;
+
+  @include breakpoint(large) {
+    padding: var(--spacer-large) 0 0;
+  }
 
   .block-inner {
     display: flex;
@@ -11,8 +14,6 @@
   }
 
   .logos {
-    border-bottom: 1px dotted var(--color-border);
-    padding-bottom: var(--spacer-large);
     display: grid;
     grid-gap: var(--spacer-small);
     grid-template-columns: repeat(2, 1fr);
@@ -41,7 +42,7 @@
       img {
         display: block;
         margin: 0 auto;
-        max-width: 140px;
+        max-width: 100px;
         max-height: 100%;
 
         @include breakpoint(large) {
@@ -55,28 +56,30 @@
       grid-column-end: span 2;
       grid-row-start: 1;
       grid-row-end: span 2;
-      padding: var(--spacer-small);
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       @include breakpoint(large) {
-        display: flex;
-        align-items: center;
+        text-align: left;
+        padding: var(--spacer-small);
         grid-column-start: 4;
         grid-column-end: span 3;
         grid-row-start: 1;
         grid-row-end: 3;
-        padding-left: var(--spacer-small);
       }
 
       .large {
-        margin: 0;
+        margin: 0 auto;
         @include fontSize(22px);
         line-height: 1.5;
         font-weight: 700;
-        text-align: left;
+        text-align: center;
         color: var(--color-gray);
 
         @include breakpoint(large) {
           @include fontSize(28px);
+          text-align: left;
         }
       }
     }

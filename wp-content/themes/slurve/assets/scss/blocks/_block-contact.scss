@@ -1,6 +1,8 @@
 .block-contact {
   &__inner {
-    display: flex;
+    @include breakpoint(medium) {
+      display: flex;
+    }
   }
 
   .form {
@@ -8,9 +10,11 @@
   }
 
   .text {
-    flex: 1 1 35%;
+    margin-top: var(--spacer);
 
     @include breakpoint(medium) {
+      flex: 1 1 35%;
+      margin-top: 0;
       padding-left: var(--spacer);
     }
   }
