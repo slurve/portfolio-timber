@@ -390,7 +390,8 @@ h4 {
       display: block;
       width: auto;
       height: auto;
-      background-color: transparent; } }
+      background-color: transparent;
+      padding: 0; } }
   .nav-main ul {
     display: flex; }
     .nav-main ul li {
