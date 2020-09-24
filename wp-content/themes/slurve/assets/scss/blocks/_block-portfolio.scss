@@ -29,13 +29,14 @@
 }
 
 .project {
-  padding-top: var(--spacer-large);
+  padding-top: var(--spacer);
 
   @include breakpoint(medium) {
     border-bottom: 1px dotted var(--color-border);
     display: flex;
     justify-content: center;
     overflow-y: hidden;
+    padding-top: var(--spacer-large);
 
     &:nth-child(2n) .text {
       order: 2;
@@ -88,12 +89,8 @@
     img {
       box-shadow: var(--box-shadow);
       display: block;
-      margin: 0 auto -12px;
-      max-width: 80%;
-
-      @include breakpoint(medium) {
-        max-width: 100%;
-      }
+      margin: 0 0 -12px;
+      max-width: 100%;
 
       &:hover {
         animation-delay: 0;

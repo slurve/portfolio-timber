@@ -30,7 +30,7 @@
   --spacer-jumbo: 10rem;
   --max-width: 1200px;
   --max-width-block: 700px;
-  --max-width-block-small: 80%;
+  --max-width-block-small: 85%;
   --max-width-wide: 980px;
   --max-width-col: 260px;
   --header-height-sm: 72px;
@@ -150,12 +150,16 @@ h2,
       font-size: 3rem; } }
 
 h3 {
-  font-size: 17px;
-  font-size: 1.0625rem;
+  font-size: 15px;
+  font-size: 0.9375rem;
   color: var(--color-gray-light);
   margin-bottom: var(--spacer-tiny);
   text-transform: uppercase;
   letter-spacing: 0.75px; }
+  @media (min-width: 740px) {
+    h3 {
+      font-size: 17px;
+      font-size: 1.0625rem; } }
 
 h4 {
   font-size: 30px;
@@ -375,19 +379,17 @@ h4 {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: center;
-  background-color: var(--color-light);
-  border-top: 1px solid var(--color-border); }
+  background-color: var(--color-gray); }
   @media (min-width: 740px) {
     .nav-main {
       position: relative;
       display: block;
       width: auto;
       height: auto;
-      background-color: none;
-      border-top: 0; } }
+      background-color: transparent; } }
   .nav-main ul {
     display: flex; }
     .nav-main ul li {
@@ -400,11 +402,15 @@ h4 {
   .nav-main .nav-link {
     font-weight: 700;
     font-size: 13px;
-    font-size: 0.8125rem; }
+    font-size: 0.8125rem;
+    color: var(--color-gray-light); }
     @media (min-width: 740px) {
       .nav-main .nav-link {
         font-size: 18px;
-        font-size: 1.125rem; } }
+        font-size: 1.125rem;
+        color: var(--color-gray); } }
+    .nav-main .nav-link:hover {
+      color: var(--color-red); }
   .nav-main .button {
     font-size: 11px;
     font-size: 0.6875rem;
@@ -417,7 +423,12 @@ h4 {
 .single-cpt_services .nav-services .nav-link,
 .current-menu-item .nav-link,
 .tax-project_type .nav-portfolio .nav-link {
-  color: var(--color-red); }
+  color: var(--color-light); }
+  @media (min-width: 740px) {
+    .single-cpt_services .nav-services .nav-link,
+    .current-menu-item .nav-link,
+    .tax-project_type .nav-portfolio .nav-link {
+      color: var(--color-red); } }
 
 .block-clients {
   text-align: center;
@@ -432,7 +443,7 @@ h4 {
     justify-content: center; }
   .block-clients .logos {
     display: grid;
-    grid-gap: var(--spacer-small);
+    grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr); }
     .page-about .block-clients .logos {
       border-bottom: 0;
@@ -547,14 +558,14 @@ h4 {
     position: relative;
     display: flex;
     justify-content: center;
-    margin: var(--spacer-small) auto 0;
-    max-width: 86%; }
+    margin: var(--spacer-small) auto 0; }
     @media (min-width: 740px) {
       .block-hero .screens {
+        max-width: 86%;
         margin-top: var(--spacer); } }
     .block-hero .screens picture {
-      margin: 0 var(--spacer-small); }
-    .block-hero .screens picture:first-child {
+      margin: 0 5px; }
+    .block-hero .screens picture:last-child {
       position: absolute;
       top: 20%;
       z-index: 2;
@@ -648,13 +659,14 @@ h4 {
       color: var(--color-gray); }
 
 .project {
-  padding-top: var(--spacer-large); }
+  padding-top: var(--spacer); }
   @media (min-width: 740px) {
     .project {
       border-bottom: 1px dotted var(--color-border);
       display: flex;
       justify-content: center;
-      overflow-y: hidden; }
+      overflow-y: hidden;
+      padding-top: var(--spacer-large); }
       .project:nth-child(2n) .text {
         order: 2; }
       .project:nth-child(2n) .screen {
@@ -691,11 +703,8 @@ h4 {
     .project .screen img {
       box-shadow: var(--box-shadow);
       display: block;
-      margin: 0 auto -12px;
-      max-width: 80%; }
-      @media (min-width: 740px) {
-        .project .screen img {
-          max-width: 100%; } }
+      margin: 0 0 -12px;
+      max-width: 100%; }
       .project .screen img:hover {
         animation-delay: 0;
         animation-duration: 0.4s;

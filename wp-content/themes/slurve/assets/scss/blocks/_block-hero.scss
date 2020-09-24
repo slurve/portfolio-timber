@@ -15,18 +15,18 @@
     display: flex;
     justify-content: center;
     margin: var(--spacer-small) auto 0;
-    max-width: 86%;
 
     @include breakpoint(medium) {
+      max-width: 86%;
       margin-top: var(--spacer);
     }
 
     picture {
       @extend %shadow;
-      margin: 0 var(--spacer-small);
+      margin: 0 5px;
     }
 
-    picture:first-child {
+    picture:last-child {
       position: absolute;
       top: 20%;
       z-index: 2;

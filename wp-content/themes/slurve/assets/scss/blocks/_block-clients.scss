@@ -15,7 +15,7 @@
 
   .logos {
     display: grid;
-    grid-gap: var(--spacer-small);
+    grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
 
     .page-about & {
