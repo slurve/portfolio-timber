@@ -7,7 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://use.typekit.net/qtq7hgk.css" />
-    {{ function('wp_head') }}
+    <link rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ icon_path }}/icon/apple-touch-icon.png" />
+    <link rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ icon_path }}/favicon-32x32.png" />
+    <link rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ icon_path }}/favicon-16x16.png" />
+    <link rel="manifest" href="{{ icon_path }}/site.webmanifest" />
+    <link rel="mask-icon"
+      href="{{ icon_path }}/safari-pinned-tab.svg"
+      color="#ea1919" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" /> {{ function('wp_head') }}
     <script async
       src="https://www.googletagmanager.com/gtag/js?id=UA-973375-1"></script>
     <script>

@@ -227,23 +227,11 @@ class StarterSite extends Timber\Site
     $theme_path = get_stylesheet_directory();
     $context['site'] = $this;
     $context['is_front'] = is_front_page();
-
-    // footer
-    $context['footer__about'] = get_field('footer__about', 'options');
-    $context['footer__copyright'] = get_field('footer__copyright', 'options');
-    $context['footer__legal_links'] = get_field(
-      'footer__legal_links',
-      'options'
-    );
+    $context['icon_path'] = get_template_directory_uri() . '/assets/icon';
 
     // social
     $context['social__linkedin'] = get_field('social__linkedin', 'options');
     $context['social__twitter'] = get_field('social__twitter', 'options');
-
-    // contact
-    $context['contact__address'] = get_field('contact__address', 'options');
-    $context['contact__email'] = get_field('contact__email', 'options');
-    $context['contact__phone'] = get_field('contact__phone', 'options');
 
     // options page - clients
     $context['clients__logos'] = get_field('clients__logos', 'options');
@@ -308,9 +296,6 @@ class StarterSite extends Timber\Site
       'contact__sidebar_text',
       'options'
     );
-
-    // search results
-    $context['search_term'] = get_search_query();
 
     // terms
     $context['project_type'] = Timber::get_terms('project_type');
