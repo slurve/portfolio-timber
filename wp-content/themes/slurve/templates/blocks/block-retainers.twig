@@ -3,6 +3,27 @@
     <div class="plans">
       <div class="plan">
         <h2>
+          {{ retainer_s_title }}
+        </h2>
+        <h3>
+          {{ retainer_s_price }}
+          {% if retainer_s_notes %}
+            <span class="notes">{{ retainer_s_notes }}</span>
+          {% endif %}
+        </h3>
+        <ul>
+          {% for feature in retainer_s_features %}
+            <li>
+              <strong>{{ feature.list_feature }}</strong><p>
+                {{ feature.list_description }}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+        {# <a href="{{ retainer_a_link.url }}" class="button">Start plan</a> #}
+      </div>
+      <div class="plan">
+        <h2>
           {{ retainer_a_title }}
         </h2>
         <h3>

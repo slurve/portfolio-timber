@@ -255,6 +255,15 @@ class StarterSite extends Timber\Site
     $context['plan_c_link'] = get_field('plan_c_link', 'options');
 
     // options page - retainers
+    $context['retainer_s_title'] = get_field('retainer_s_title', 'options');
+    $context['retainer_s_price'] = get_field('retainer_s_price', 'options');
+    $context['retainer_s_notes'] = get_field('retainer_s_notes', 'options');
+    $context['retainer_s_features'] = get_field(
+      'retainer_s_features',
+      'options'
+    );
+    $context['retainer_a_link'] = get_field('retainer_a_link', 'options');
+
     $context['retainer_a_title'] = get_field('retainer_a_title', 'options');
     $context['retainer_a_price'] = get_field('retainer_a_price', 'options');
     $context['retainer_a_notes'] = get_field('retainer_a_notes', 'options');
@@ -263,6 +272,7 @@ class StarterSite extends Timber\Site
       'options'
     );
     $context['retainer_a_link'] = get_field('retainer_a_link', 'options');
+
     $context['retainer_b_title'] = get_field('retainer_b_title', 'options');
     $context['retainer_b_price'] = get_field('retainer_b_price', 'options');
     $context['retainer_b_notes'] = get_field('retainer_b_notes', 'options');

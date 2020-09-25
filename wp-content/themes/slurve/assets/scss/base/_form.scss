@@ -76,6 +76,16 @@
     margin-left: 3px;
   }
 
+  .gform_heading {
+    margin-bottom: var(--spacer);
+    text-align: center;
+
+    .gform_title {
+      text-transform: none;
+      letter-spacing: 0;
+    }
+  }
+
   .gfield {
     margin-bottom: 40px;
   }

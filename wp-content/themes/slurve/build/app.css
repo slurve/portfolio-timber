@@ -260,6 +260,13 @@ h4 {
 .gform_wrapper .gfield_required {
   margin-left: 3px; }
 
+.gform_wrapper .gform_heading {
+  margin-bottom: var(--spacer);
+  text-align: center; }
+  .gform_wrapper .gform_heading .gform_title {
+    text-transform: none;
+    letter-spacing: 0; }
+
 .gform_wrapper .gfield {
   margin-bottom: 40px; }
 
@@ -619,6 +626,11 @@ h4 {
       font-size: 13px;
       font-size: 0.8125rem;
       color: var(--color-gray-light); }
+    .plans .plan i {
+      font-style: normal;
+      font-size: 13px;
+      font-size: 0.8125rem;
+      color: var(--color-gray); }
     .plans .plan ul {
       margin: 36px; }
     .plans .plan li {
@@ -734,6 +746,16 @@ h4 {
   font-size: 16px;
   font-size: 1rem;
   color: var(--color-gray); }
+
+@media (min-width: 740px) {
+  .cpt_services-monthly-retainers .plans {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); } }
+
+@media (min-width: 1024px) {
+  .cpt_services-monthly-retainers .plans {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr; } }
 
 .block-services {
   text-align: center; }

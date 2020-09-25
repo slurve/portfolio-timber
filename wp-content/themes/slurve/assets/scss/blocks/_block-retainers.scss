@@ -3,4 +3,16 @@
     @include fontSize(16px);
     color: var(--color-gray);
   }
+
+  .plans {
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+    }
+  }
 }

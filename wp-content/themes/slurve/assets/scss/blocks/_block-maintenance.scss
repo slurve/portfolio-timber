@@ -46,6 +46,12 @@
       color: var(--color-gray-light);
     }
 
+    i {
+      font-style: normal;
+      @include fontSize(13px);
+      color: var(--color-gray);
+    }
+
     ul {
       margin: 36px;
     }
