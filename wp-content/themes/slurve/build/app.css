@@ -310,6 +310,15 @@ h4 {
   .footer .info {
     margin: var(--spacer) auto 0;
     font-weight: 700; }
+  .footer .social {
+    margin: 15px auto 0; }
+    .footer .social svg {
+      width: 20px;
+      margin: 0 6px; }
+      .footer .social svg path {
+        fill: var(--color-gray-light); }
+      .footer .social svg:hover path {
+        fill: var(--color-light); }
 
 @keyframes nav_in_sm {
   0% {

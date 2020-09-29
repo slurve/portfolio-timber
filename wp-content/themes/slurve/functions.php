@@ -26,7 +26,7 @@ function add_styles()
 {
   wp_enqueue_style(
     'master',
-    get_bloginfo('stylesheet_directory') . '/build/app.css',
+    get_bloginfo('stylesheet_directory') . '/build/app.min.css',
     '',
     date('dmYis'),
     'screen'
@@ -45,7 +45,7 @@ function add_scripts($post)
     wp_enqueue_script('jquery');
     wp_enqueue_script(
       'custom',
-      get_template_directory_uri() . '/build/app.js?v=' . $rand,
+      get_template_directory_uri() . '/build/app.min.js?v=' . $rand,
       null,
       null,
       true
@@ -229,10 +229,6 @@ class StarterSite extends Timber\Site
     $context['is_front'] = is_front_page();
     $context['icon_path'] = get_template_directory_uri() . '/assets/icon';
 
-    // social
-    $context['social__linkedin'] = get_field('social__linkedin', 'options');
-    $context['social__twitter'] = get_field('social__twitter', 'options');
-
     // options page - clients
     $context['clients__logos'] = get_field('clients__logos', 'options');
     $context['clients__text'] = get_field('clients__text', 'options');
@@ -331,50 +327,33 @@ class StarterSite extends Timber\Site
     $context['logo'] = new Timber\Image(
       $theme_path . '/assets/images/logo.svg'
     );
-    $context['whitesnake'] = new Timber\Image($theme_path . '/assets/video/');
+    $context['logo_linkedin'] = new Timber\Image(
+      $theme_path . '/assets/images/linkedin.svg'
+    );
+    $context['logo_twitter'] = new Timber\Image(
+      $theme_path . '/assets/images/twitter.svg'
+    );
 
     return $context;
   }
 
   public function theme_supports()
   {
-    // Add default posts and comments RSS feed links to head.
     add_theme_support('automatic-feed-links');
-
-    /*
-     * Let WordPress manage the document title.
-     * By adding theme support, we declare that this theme does not use a
-     * hard-coded <title> tag in the document head, and expect WordPress to
-     * provide it for us.
-     */
     add_theme_support('title-tag');
-
-    /*
-     * Enable support for Post Thumbnails on posts and pages.
-     *
-     * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-     */
     add_theme_support('post-thumbnails');
+    add_theme_support('menus');
 
-    /*
-     * Add ACF Options page.
-     */
     if (function_exists('acf_add_options_page')) {
       acf_add_options_page();
     }
 
-    /*
-     * Switch default core markup for search form, comment form, and comments
-     * to output valid HTML5.
-     */
     add_theme_support('html5', [
       'comment-form',
       'comment-list',
       'gallery',
       'caption'
     ]);
-
-    add_theme_support('menus');
 
     /*
      * Remove extra stuff from wp_head
@@ -393,16 +372,6 @@ class StarterSite extends Timber\Site
     remove_action('wp_print_styles', 'print_emoji_styles');
     remove_action('wp_head', 'print_emoji_detection_script', 7);
     remove_action('wp_head', 'rest_output_link_wp_head');
-  }
-
-  /** This Would return 'foo bar!'.
-   *
-   * @param string $text being 'foo', then returned 'foo bar!'.
-   */
-  public function myfoo($text)
-  {
-    $text .= ' bar!';
-    return $text;
   }
 
   /** This is where you can add your own functions to twig.

@@ -14,4 +14,21 @@
     margin: var(--spacer) auto 0;
     font-weight: 700;
   }
+
+  .social {
+    margin: 15px auto 0;
+
+    svg {
+      width: 20px;
+      margin: 0 6px;
+
+      path {
+        fill: var(--color-gray-light);
+      }
+
+      &:hover path {
+        fill: var(--color-light);
+      }
+    }
+  }
 }
